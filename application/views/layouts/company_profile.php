@@ -1,208 +1,1020 @@
-
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <link rel="preload" href="https://b2bitem.com/public/frontend/css/bootstrap.min.css" as="style" />
-    <link rel="preload" as="image" href="https://b2bitem.com/public/frontend/biz-images/b2bitem-import-export.gif" />
-    <title>B2B Marketplace for Importers, Exporters and Manufacturers - Largest B2B Business Platform</title>
-    
-     <link rel="canonical" href="https://b2bitem.com" /> 
-   
-   <!--  <link rel="icon" type="image/x-icon" href="https://b2bitem.com/public/images/fav.png" /> -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="<?=base_url();?>/public/frontend/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="<?=base_url();?>public/frontend/css/font-awesome-4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
-    <link rel="stylesheet" type="text/css" href="<?=base_url();?>public/frontend/css/icofont/icofont.min.css">
-    <link rel="stylesheet" type="text/css" href="<?=base_url();?>public/frontend/css/main.css">
-    <link rel="stylesheet" type="text/css" href="<?=base_url();?>public/frontend/css/googlefonts.css">
-  
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-121345574-1" type="d257963e33dac07492b9d6fd-text/javascript"></script>
-    <script type="d257963e33dac07492b9d6fd-text/javascript">
-      window.dataLayer = window.dataLayer || [];
 
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag('js', new Date());
-      gtag('config', 'UA-121345574-1');
-    </script>
-    <script type="d257963e33dac07492b9d6fd-text/javascript">
-      window._mfq = window._mfq || [];
-      (function() {
-        var mf = document.createElement("script");
-        mf.type = "text/javascript";
-        mf.defer = true;
-        mf.src = "//cdn.mouseflow.com/projects/a1f1aadc-00f2-4c6b-904d-cbc3668b3d15.js";
-        document.getElementsByTagName("head")[0].appendChild(mf);
-      })();
-    </script>
-    <script type="text/javascript" src="<?=base_url();?>public/frontend/js/jquery-3.4.1.min.js"></script>
-  </head>
-  <body>
-    <div class="desktop-view-nav mb-3">
-      <nav class="navbar navbar-expand-lg biz-header">
-        <div class="container custom-container">
-          <div class="scroll-show-item">
-            <div class="d-flex align-items-center">
-              <div class="header-single-menu-drop dropdown mr-2">
-                <a href="#" class="btn btn-sm" data-toggle="dropdown">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu">
-                    <line x1="3" y1="12" x2="21" y2="12"></line>
-                    <line x1="3" y1="6" x2="21" y2="6"></line>
-                    <line x1="3" y1="18" x2="21" y2="18"></line>
-                  </svg>
-                </a>
-                <div class="dropdown-menu rounded-0">
-                  <a href="#" class="dropdown-item d-flex">
-                    <span class="mr-2">
-                      <i class="fa fa-home link-icon"></i>
-                    </span> Home </a>
-                  <a href="<?=site_url('product');?>" class="dropdown-item d-flex">
-                    <span class="mr-2">
-                      <i class="fa fa-cube link-icon"></i>
-                    </span> Products </a>
-                  <a href="<?=site_url('website/business_directory');?>" class="dropdown-item d-flex">
-                    <span class="mr-2">
-                      <i class="fa fa-list-ul link-icon"></i>
-                    </span> Business Directory </a>
-                  <a href="#" class="dropdown-item d-flex">
-                    <span class="mr-2">
-                      <i class="fa fa-eraser link-icon"></i>
-                    </span> B2B Leads </a>
-                  <a href="#" class="dropdown-item d-flex">
-                    <span class="mr-2">
-                      <i class="fa fa-industry link-icon"></i>
-                    </span> Companies </a>
-                </div>
-              </div>
-              <a class="navbar-brand small-brand" href="#">
-                <!-- <img src="https://b2bitem.com/public/logo/b2bitem-logo-small.jpg" class="img-fluid"> -->
-                B2BITEM
-              </a>
-            </div>
-          </div>
-          <a class="navbar-brand" href="#">
-            B2BITEM
-            <!-- <img src="https://b2bitem.com/public/logo/b2bitem-logo.jpg" class="img-fluid"> -->
-          </a>
-          <!-- <ul class="nav navbar-nav flex-row flex-nowrap align-items-center order-lg-10 ml-auto">
-            <li class="nav-item mr-2">
-              <a href="<?=site_url('website/user_login');?>" class="nav-link text-them">
-                <span class="ml-2">Sign In</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="<?=site_url('website/join_fee');?>" class="d-block text-nowrap text-14 text-medium text-white py-0 px-2 rounded btn-join-free">Join Free</a>
-            </li>
-          </ul> -->
-          <button class="navbar-toggler border" type="button" data-toggle="collapse" data-target="#header">
-            <i class="fa fa-bars"></i>
-          </button>
-          <!-- <div class="collapse navbar-collapse" id="header">
-            <div class="d-flex justify-content-between w-100">
-              <div class="d-flex flex-wrap mx-auto">
-                <div class="biz-header-search mr-3">
-                  <form method="get" action="#">
-                    <div class="biz-header-search-group">
-                      <input type="text" name="keyword" value="" title="Start search here" id="searchKeyword" placeholder="Search..." required aria-label="keyword">
-                      <button type="submit" class="btn text-nowrap search-btn">Search</button>
-                    </div>
-                  </form>
-                </div>
-                <div class="nav-item dropdown">
-                  <a href="#" title="'Post Buy Requirement" class="btn btn-dark bg-theme">Post Buy Requirement</a>
-                </div>
-              </div>
-              <div>
-                <ul class="nav navbar-nav flex-row flex-nowrap nav-on-responsive">
-                  <li class="nav-item dropdown mr-2">
-                    <a href="#" class="nav-link text-nowrap text-theme">Sell More</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div> -->
-        </div>
-      </nav>
-      
-    </div>
-    
-    <div class="sticky-top">
-      <div class="company-header bg-white py-3">
-        <div class="container custom-container">
-          <div class="d-flex align-items-lg-center">
-            <div class="mr-3">
-              <a href="#" class="company-navbar-brand ">
-                <img src="#" alt="" title="" class="img-fluid" decoding="async" loading="lazy">
-              </a>
-            </div>
-            <div class="ml-auto" style="margin-left: 0px !important;">
-              <h1 class="text-lg-down-16 text-lg-28 text-strong text-right">
-                <a href="#" class="text-dark" id="com_header"></a>
-              </h1>
-              <p class="m-0 text-strong text-muted text-13 text-right">
-                <i class="icofont-google-map"></i> <span id="com_address"></span>
-              </p>
-            </div>
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+	<title>
+		B2B Marketplace for Importers, Exporters and Manufacturers - Largest B2B
+		Business Platform
+	</title>
+	<link rel="canonical" href="https://b2bitem.com" />
 
-          </div>
-        </div>
-      </div>
-	  <?php $com_slag = $this->session->userdata('com_slag'); ?>
-      <nav class="navbar navbar-expand company-menubar py-0 mb-4">
-        <div class="container custom-container">
-          <div class="collapse navbar-collapse" id="companyMenu">
-            <ul class="navbar-nav company-nav-menu">
-              <li class="nav-item  active ">
-                <a class="nav-link text-white" href="<?=site_url('company/' .$com_slag);?>">Home</a>
-              </li>
-              <li class="nav-item ">
-			  
-                <a class="nav-link text-white" href="<?=site_url('company/product/' .$com_slag);?>">Products</a>
-              </li>
-              <li class="nav-item ">
-                <a class="nav-link text-white" href="#">Contact</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-    </div>
+	<link rel="icon" type="image/x-icon" href="assets/images/logo/B2B.png" />
+	<meta name="keywords" content="HTML5 Template" />
+	<meta name="description" content="Molla - Bootstrap eCommerce Template" />
+	<meta name="author" content="p-themes" />
+	<!-- Favicon -->
+	<!-- <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/images/icons/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/images/icons/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/images/icons/favicon-16x16.png"
+    />
+    <link rel="manifest" href="assets/images/icons/site.html" />
+    <link
+      rel="mask-icon"
+      href="assets/images/icons/safari-pinned-tab.svg"
+      color="#666666"
+    />
+    <link rel="shortcut icon" href="assets/images/icons/favicon.ico" />
+    <meta name="apple-mobile-web-app-title" content="Molla" />
+    <meta name="application-name" content="Molla" /> -->
+	<meta name="msapplication-TileColor" content="#cc9966" />
+	<meta name="msapplication-config" content="assets/images/icons/browserconfig.xml" />
+	<meta name="theme-color" content="#ffffff" />
+	<link rel="stylesheet" href="assets/vendor/line-awesome/line-awesome/line-awesome/css/line-awesome.min.css" />
+	<!-- Plugins CSS File -->
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="assets/css/plugins/owl-carousel/owl.carousel.css" />
+	<link rel="stylesheet" href="assets/css/plugins/magnific-popup/magnific-popup.css" />
+	<link rel="stylesheet" href="assets/css/plugins/jquery.countdown.css" />
+	<!-- Main CSS File -->
+	<link rel="stylesheet" href="assets/css/style.css" />
+	<link rel="stylesheet" href="assets/css/b2b.css" />
+	<link rel="stylesheet" href="assets/css/skins/skin-demo-14.css" />
+	<link rel="stylesheet" href="assets/css/demos/demo-14.css" />
+	<link rel="stylesheet" href="assets/css/plugins/nouislider/nouislider.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
-<style type="text/css">
-  .slidecom{
-    margin-bottom: 40px;
-    margin-top: -24px;
-  }
-</style>
+	<!-- <link rel="stylesheet" href="assets/css/main.css" /> -->
+	<!-- <link rel="stylesheet" type="text/css" href="<?= base_url(); ?>public/frontend/css/b2b.css"> -->
+	<link rel="stylesheet" type="text/css" href="<?= base_url(); ?>public/frontend/css/icofont/icofont.min.css">
+	<link rel="stylesheet" type="text/css" href="<?= base_url(); ?>public/frontend/css/googlefonts.css">
+	<link rel="stylesheet" type="text/css" href="<?= base_url(); ?>public/frontend/css/font-awesome-4.7.0/css/font-awesome.min.css">
 
-    <div class="com_slider">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="slidecom">
-                    <img style="width: 100%;" src="https://blog.bydrec.com/hubfs/7%20Ways%20Working%20with%20a%20Nearshore%20Software%20Development%20Team%20Will%20Benefit%20Your%20Company.jpg">
-                </div>
-            </div>
-        </div>
-    </div>
-	
-    <main class="main-body">
-		<?php echo $content_for_layout; ?>
-    </main>
-	
-    <footer class="footer py-0">
-      <section class="py-3 bg-black">
-        <div class="container custom-container">
-          <p class="text-center text-thin text-14 text-white m-0">@B2B-ITEM | All Rights Reserved</p>
-        </div>
-      </section>
-    </footer>
-    
-    
-    <script src="<?=base_url();?>public/frontend/js/popper.min.js"></script>
-    <script src="<?=base_url();?>public/frontend/js/bootstrap.min.js"></script>
-    <script src="<?=base_url();?>public/frontend/js/main.js"></script>
-  </body>
+</head>
+
+<body>
+	<div class="page-wrapper">
+		<header class="header header-14">
+			<div class="header-top">
+				<div class="container">
+					<div class="header-left">
+						<a href="tel:#"><i class="icon-phone"></i>Call: +880XXXXXXXXXX</a>
+					</div>
+					<!-- End .header-left -->
+
+					<div class="header-right">
+						<ul class="top-menu">
+							<li>
+								<a href="#">Links</a>
+								<ul class="menus">
+									<li>
+										<div class="header-dropdown">
+											<a href="#">Language</a>
+											<div class="header-menu">
+												<ul>
+													<li><a href="#">English</a></li>
+													<li><a href="#">French</a></li>
+													<li><a href="#">Spanish</a></li>
+												</ul>
+											</div>
+											<!-- End .header-menu -->
+										</div>
+										<!-- End .header-dropdown -->
+									</li>
+									<li class="login">
+										<?php if (empty($this->session->userdata('company_id'))) { ?>
+
+											<ul class="nav navbar-nav flex-row flex-nowrap align-items-center order-lg-10 ml-auto">
+												<li class="nav-item mr-2">
+													<a href="<?= site_url('login'); ?>" class="nav-link text-them">
+														<span class="ml-2">Sign In</span>
+													</a>
+												</li>
+												<li class="nav-item">
+													<a href="<?= site_url('register'); ?>" class="d-block text-nowrap text-14 text-medium text-white py-0 px-2 rounded btn-join-free">Join Free</a>
+												</li>
+											</ul>
+										<?php } else { ?>
+											<div class="d-flex align-items-center ml-auto">
+												<div class="nav-link pr-0 dropdown header-user">
+													<div data-toggle="dropdown" class="px-2 cursor">
+														<span class="box-30 cursor rounded-circle bg-login-icon" style="background-color: #021b79;color: #fff;">
+															<i class="icofont-ui-user text-14"></i>
+														</span>
+													</div>
+													<div class="dropdown-menu dropdown-menu-right shadow-sm mr-n2 p-3">
+														<ul class="list-group list-group-flush mb-0">
+															<li class="list-group-item px-0 py-2">
+																<a href="#" class="dropdown-item px-0 d-flex text-17">
+																	<span class="mr-2">
+																		<i class="fa fa-dashboard  link-icon"></i>
+																	</span> Dashboard </a>
+															</li>
+															<li class="list-group-item px-0 py-2">
+																<a href="#" class="dropdown-item px-0 d-flex text-17">
+																	<span class="mr-2">
+																		<i class="fa fa-envelope-o link-icon"></i>
+																	</span> Message Center </a>
+															</li>
+															<li class="list-group-item px-0 py-2">
+																<a href="#" class="dropdown-item px-0 d-flex text-17">
+																	<span class="mr-2">
+																		<i class="icofont-architecture-alt link-icon"></i>
+																	</span> Update Profile </a>
+															</li>
+															<li class="list-group-item px-0 py-2">
+																<a href="#" class="dropdown-item px-0 d-flex text-17">
+																	<span class="mr-2">
+																		<i class="fa fa-cube link-icon"></i>
+																	</span> My Products </a>
+															</li>
+															<li class="list-group-item px-0 py-2">
+																<div>
+																	<a href="#" class="dropdown-item px-0 text-17 text-wrap">
+																		<span class="d-block">Submit Buy Requirement</span>
+																		<small class="d-block">Submit your buying needs to get quotes from top suppliers.</small>
+																	</a>
+																</div>
+															</li>
+															<li class="list-group-item px-0 py-2">
+																<a href="#" class="dropdown-item px-0 d-flex text-17">
+																	<span class="mr-2">
+																		<i class="fa fa-sign-out text-14 link-icon"></i>
+																	</span> Logout </a>
+															</li>
+														</ul>
+													</div>
+												</div>
+											</div>
+										<?php } ?>
+									</li>
+								</ul>
+							</li>
+						</ul>
+						<!-- End .top-menu -->
+					</div>
+					<!-- End .header-right -->
+				</div>
+				<!-- End .container -->
+			</div>
+			<!-- End .header-top -->
+
+			<div class="header-middle">
+				<div class="container-fluid">
+					<div class="header-left">
+						<button class="mobile-menu-toggler">
+							<span class="sr-only">Toggle mobile menu</span>
+							<i class="icon-bars"></i>
+						</button>
+
+						<a href="index.html" class="logo">
+							<img src="assets/images/logo/B2B-2nd.png" alt="b2b Logo" width="150" height="75" />
+						</a>
+
+						<nav class="main-nav">
+							<ul class="menu sf-arrows">
+								<li>
+									<a href="#" class="sf-ul">Home</a>
+								</li>
+								<li>
+									<a href="<?= site_url('product') ?>" class="sf-ul">Products</a>
+								</li>
+								<li>
+									<a href="<?= site_url('b2bleads') ?>" class="sf-ul">B2B Leads</a>
+								</li>
+								<li>
+									<a href="<?= site_url('companies') ?>" class="sf-ul">Companies</a>
+								</li>
+							</ul><!-- End .menu -->
+						</nav><!-- End .main-nav -->
+					</div><!-- End .header-left -->
+
+					<div class="header-right">
+
+					</div><!-- End .header-right -->
+				</div><!-- End .container-fluid -->
+			</div><!-- End .header-middle -->
+
+			<div class="header-top">
+				<div class="container">
+					<div class="header-right">
+						<!-- End .top-menu -->
+					</div>
+					<!-- End .header-right -->
+				</div>
+				<!-- End .container -->
+			</div>
+			<!-- End .header-top -->
+
+
+			<div class="header-middle sticky-header">
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-auto col-lg-3 col-xl-3 col-xxl-2">
+							<a href="#" class="logo">
+								<?php if (!empty($info['logo'])) { ?>
+									<img src="https://b2bitem.com/upload/company/<?= $info['logo']; ?>" alt="b2b company Logo" width="50" height="75" />
+								<?php } ?>
+							</a>
+							<div class="supplier-name" style="margin-top: 10px; font-size: 14px; font-weight: normal; color: #333; padding: 10px; margin-left: 10px;">
+								<h7><?= $info['company_name']; ?></h7>
+							</div>
+						</div>
+						<!-- End .col-xl-3 col-xxl-2 -->
+
+						<div class="col col-lg-9 col-xl-9 col-xxl-10 header-middle-right">
+							<div class="row">
+								<div class="col-lg-8 col-xxl-4-5col d-none d-lg-block">
+									<div class="header-search header-search-extended header-search-visible header-search-no-radius">
+										<a href="#" class="search-toggle" role="button"><i class="icon-search"></i></a>
+										<form action="#" method="get">
+											<div class="header-search-wrapper search-wrapper-wide">
+
+												<!-- End .select-custom -->
+												<label for="q" class="sr-only">Search</label>
+												<input type="search" class="form-control" name="q" id="q" placeholder="Search products ..." required />
+
+												<button class="btn btn-primary" type="submit">
+													<i class="icon-search"></i>
+												</button>
+											</div>
+											<!-- End .header-search-wrapper -->
+										</form>
+									</div>
+									<!-- End .header-search -->
+								</div>
+								<!-- End .col-xxl-4-5col -->
+
+								<div class="col-lg-4 col-xxl-5col d-flex justify-content-end align-items-center">
+									<div class="header-dropdown-link">
+										<div class="dropdown cart-dropdown">
+											<a href="#" class="dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-display="static">
+												<i class="icon-shopping-cart"></i>
+												<span class="cart-count">2</span>
+												<span class="cart-txt">Orders</span>
+											</a>
+
+											<div class="dropdown-menu dropdown-menu-right">
+												<div class="dropdown-cart-products">
+													<div class="product">
+														<div class="product-cart-details">
+															<h4 class="product-title">
+																<a href="#">Beige knitted elastic runner shoes</a>
+															</h4>
+
+															<span class="cart-product-info">
+																<span class="cart-product-qty">1</span>
+																x $84.00
+															</span>
+														</div>
+														<!-- End .product-cart-details -->
+
+														<figure class="product-image-container">
+															<a href="#" class="product-image">
+																<img src="assets/images/products/cart/product-1.jpg" alt="product" />
+															</a>
+														</figure>
+														<a href="#" class="btn-remove" title="Remove Product"><i class="icon-close"></i></a>
+													</div>
+													<!-- End .product -->
+
+													<div class="product">
+														<div class="product-cart-details">
+															<h4 class="product-title">
+																<a href="#">Blue utility pinafore denim dress</a>
+															</h4>
+
+															<span class="cart-product-info">
+																<span class="cart-product-qty">1</span>
+																x $76.00
+															</span>
+														</div>
+														<!-- End .product-cart-details -->
+
+														<figure class="product-image-container">
+															<a href="#" class="product-image">
+																<img src="assets/images/products/cart/product-2.jpg" alt="product" />
+															</a>
+														</figure>
+														<a href="#" class="btn-remove" title="Remove Product"><i class="icon-close"></i></a>
+													</div>
+													<!-- End .product -->
+												</div>
+												<!-- End .cart-product -->
+
+												<div class="dropdown-cart-total">
+													<span>Total</span>
+
+													<span class="cart-total-price">$160.00</span>
+												</div>
+												<!-- End .dropdown-cart-total -->
+
+												<div class="dropdown-cart-action">
+													<a href="cart.html" class="btn btn-primary">View Cart</a>
+													<a href="checkout.html" class="btn btn-outline-primary-2"><span>Checkout</span><i class="icon-long-arrow-right"></i></a>
+												</div>
+												<!-- End .dropdown-cart-total -->
+											</div>
+											<!-- End .dropdown-menu -->
+										</div>
+										<!-- End .cart-dropdown -->
+									</div>
+								</div>
+								<!-- End .col-xxl-5col -->
+							</div>
+							<!-- End .row -->
+						</div>
+						<!-- End .col-xl-9 col-xxl-10 -->
+					</div>
+					<!-- End .row -->
+				</div>
+				<!-- End .container-fluid -->
+			</div>
+			<!-- End .header-middle -->
+
+			<div class="header-bottom sticky-header-2">
+				<div class="container-fluid">
+					<div class="row">
+
+						<!-- End .col-xl-3 col-xxl-2 -->
+						<?php $com_slag = $this->session->userdata('com_slag'); ?>
+						<div class="col col-lg-6 col-xl-6 col-xxl-8 header-center">
+							<nav class="main-nav">
+								<ul class="menu sf-arrows">
+									<li class="megamenu-container active">
+										<a href="<?= site_url('company/' . $com_slag); ?>" class="sf-with-ul">Home</a>
+
+									</li>
+									<li>
+										<a href="<?= site_url('company/product/' . $com_slag); ?>" class="sf-with-ul">Products</a>
+									</li>
+									<!-- <li>
+										<a href="#" class="sf-with-ul">Company Profile</a>
+									</li> -->
+									<li>
+										<a href="#" class="sf-with-ul">Contact Us</a>
+									</li>
+
+								</ul>
+								<!-- End .menu -->
+							</nav>
+							<!-- End .main-nav -->
+						</div>
+						<!-- End .col-xl-9 col-xxl-10 -->
+
+						<div class="col col-lg-3 col-xl-3 col-xxl-2 header-right">
+							<i class="la la-lightbulb-o"></i>
+							<p><span>Chat</span></p>
+						</div>
+					</div>
+					<!-- End .row -->
+				</div>
+				<!-- End .container-fluid -->
+			</div>
+			<!-- End .header-bottom -->
+		</header>
+		<!-- End .header -->
+
+		<main class="main">
+			<?php echo $content_for_layout; ?>
+		</main>
+		<!-- End .main -->
+
+		<footer class="footer">
+			<div class="cta cta-horizontal cta-horizontal-box bg-dark bg-image" style="background-image: url('assets/images/demos/demo-14/bg-1.jpg')">
+				<div class="container-fluid">
+					<div class="row align-items-center">
+						<div class="col-xl-8 offset-xl-2">
+							<div class="row align-items-center">
+								<div class="col-lg-5 cta-txt">
+									<h3 class="cta-title text-primary">Join Our Newsletter</h3>
+									<!-- End .cta-title -->
+									<p class="cta-desc text-light">
+										Subcribe to get information about products and coupons
+									</p>
+									<!-- End .cta-desc -->
+								</div>
+								<!-- End .col-lg-5 -->
+
+								<div class="col-lg-7">
+									<form action="#">
+										<div class="input-group">
+											<input type="email" class="form-control" placeholder="Enter your Email Address" aria-label="Email Adress" required />
+											<div class="input-group-append">
+												<button class="btn" type="submit">Subscribe</button>
+											</div>
+											<!-- .End .input-group-append -->
+										</div>
+										<!-- .End .input-group -->
+									</form>
+								</div>
+								<!-- End .col-lg-7 -->
+							</div>
+							<!-- End .row -->
+						</div>
+						<!-- End .col-xl-8 offset-2 -->
+					</div>
+					<!-- End .row -->
+				</div>
+				<!-- End .container-fluid -->
+			</div>
+			<!-- End .cta -->
+			<div class="footer-middle border-0">
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-sm-12 col-lg-4">
+							<div class="widget widget-about">
+								<img src="assets/images/logo/B2B-2nd.png" class="footer-logo" alt="Footer Logo" width="150" height="65" />
+								<p>
+									Praesent dapibus, neque id cursus ucibus, tortor neque
+									egestas augue, eu vulputate magna eros eu erat. Aliquam erat
+									volutpat. Nam dui mi, tincidunt quis, accumsan porttitor,
+									facilisis luctus, metus.
+								</p>
+
+								<div class="widget-about-info">
+									<div class="row">
+										<div class="col-sm-6 col-md-4">
+											<span class="widget-about-title">Got Question? Call us 24/7</span>
+											<a href="tel:123456789">+880XXXXXXXXXX</a>
+										</div>
+										<!-- End .col-sm-6 -->
+										<div class="col-sm-6 col-md-8">
+											<span class="widget-about-title">Payment Method</span>
+											<figure class="footer-payments">
+												<img src="assets/images/payments.png" alt="Payment methods" width="272" height="20" />
+											</figure>
+											<!-- End .footer-payments -->
+										</div>
+										<!-- End .col-sm-6 -->
+									</div>
+									<!-- End .row -->
+								</div>
+								<!-- End .widget-about-info -->
+							</div>
+							<!-- End .widget about-widget -->
+						</div>
+						<!-- End .col-sm-12 col-lg-4 -->
+
+						<div class="col-sm-4 col-lg-2">
+							<div class="widget">
+								<h4 class="widget-title">Useful Links</h4>
+								<!-- End .widget-title -->
+
+								<ul class="widget-list">
+									<li><a href="about.html">About </a></li>
+									<li><a href="#">How to shop on </a></li>
+									<li><a href="faq.html">FAQ</a></li>
+									<li><a href="contact.html">Contact us</a></li>
+									<li><a href="login.html">Log in</a></li>
+								</ul>
+								<!-- End .widget-list -->
+							</div>
+							<!-- End .widget -->
+						</div>
+						<!-- End .col-sm-4 col-lg-2 -->
+
+						<div class="col-sm-4 col-lg-2">
+							<div class="widget">
+								<h4 class="widget-title">Customer Service</h4>
+								<!-- End .widget-title -->
+
+								<ul class="widget-list">
+									<li><a href="#">Payment Methods</a></li>
+									<li><a href="#">Money-back guarantee!</a></li>
+									<li><a href="#">Returns</a></li>
+									<li><a href="#">Shipping</a></li>
+									<li><a href="#">Terms and conditions</a></li>
+									<li><a href="#">Privacy Policy</a></li>
+								</ul>
+								<!-- End .widget-list -->
+							</div>
+							<!-- End .widget -->
+						</div>
+						<!-- End .col-sm-4 col-lg-2 -->
+
+						<div class="col-sm-4 col-lg-2">
+							<div class="widget">
+								<h4 class="widget-title">My Account</h4>
+								<!-- End .widget-title -->
+
+								<ul class="widget-list">
+									<li><a href="#">Sign In</a></li>
+									<li><a href="cart.html">View Cart</a></li>
+									<li><a href="#">My Wishlist</a></li>
+									<li><a href="#">Track My Order</a></li>
+									<li><a href="#">Help</a></li>
+								</ul>
+								<!-- End .widget-list -->
+							</div>
+							<!-- End .widget -->
+						</div>
+						<!-- End .col-sm-4 col-lg-2 -->
+
+						<div class="col-sm-4 col-lg-2">
+							<div class="widget widget-newsletter">
+								<h4 class="widget-title">Sign Up to Newsletter</h4>
+								<!-- End .widget-title -->
+
+								<p>
+									Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan.
+								</p>
+
+								<form action="#">
+									<div class="input-group">
+										<input type="email" class="form-control" placeholder="Enter your Email Address" aria-label="Email Adress" required />
+										<div class="input-group-append">
+											<button class="btn btn-dark" type="submit">
+												<i class="icon-long-arrow-right"></i>
+											</button>
+										</div>
+										<!-- .End .input-group-append -->
+									</div>
+									<!-- .End .input-group -->
+								</form>
+							</div>
+							<!-- End .widget -->
+						</div>
+						<!-- End .col-sm-4 col-lg-2 -->
+					</div>
+					<!-- End .row -->
+				</div>
+				<!-- End .container-fluid -->
+			</div>
+			<!-- End .footer-middle -->
+
+			<div class="footer-bottom">
+				<div class="container-fluid">
+					<p class="footer-copyright">
+						Copyright © 2024. All Rights Reserved.
+					</p>
+					<!-- End .footer-copyright -->
+					<div class="social-icons social-icons-color">
+						<span class="social-label">Social Media</span>
+						<a href="#" class="social-icon social-facebook" title="Facebook" target="_blank"><i class="icon-facebook-f"></i></a>
+						<a href="#" class="social-icon social-twitter" title="Twitter" target="_blank"><i class="icon-twitter"></i></a>
+						<a href="#" class="social-icon social-instagram" title="Instagram" target="_blank"><i class="icon-instagram"></i></a>
+						<a href="#" class="social-icon social-youtube" title="Youtube" target="_blank"><i class="icon-youtube"></i></a>
+						<a href="#" class="social-icon social-pinterest" title="Pinterest" target="_blank"><i class="icon-pinterest"></i></a>
+					</div>
+					<!-- End .soial-icons -->
+				</div>
+				<!-- End .container-fluid -->
+			</div>
+			<!-- End .footer-bottom -->
+		</footer>
+		<!-- End .footer -->
+	</div>
+	<!-- End .page-wrapper -->
+	<button id="scroll-top" title="Back to Top">
+		<i class="icon-arrow-up"></i>
+	</button>
+
+	<!-- Mobile Menu -->
+	<div class="mobile-menu-overlay"></div>
+	<!-- End .mobil-menu-overlay -->
+
+	<div class="mobile-menu-container">
+		<div class="mobile-menu-wrapper">
+			<span class="mobile-menu-close"><i class="icon-close"></i></span>
+
+			<form action="#" method="get" class="mobile-search">
+				<label for="mobile-search" class="sr-only">Search</label>
+				<input type="search" class="form-control" name="mobile-search" id="mobile-search" placeholder="Search in..." required />
+				<button class="btn btn-primary" type="submit">
+					<i class="icon-search"></i>
+				</button>
+			</form>
+
+			<ul class="nav nav-pills-mobile" role="tablist">
+				<li class="nav-item">
+					<a class="nav-link active" id="mobile-menu-link" data-toggle="tab" href="#mobile-menu-tab" role="tab" aria-controls="mobile-menu-tab" aria-selected="true">Menu</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" id="mobile-cats-link" data-toggle="tab" href="#mobile-cats-tab" role="tab" aria-controls="mobile-cats-tab" aria-selected="false">Categories</a>
+				</li>
+			</ul>
+
+			<div class="tab-content">
+				<div class="tab-pane fade show active" id="mobile-menu-tab" role="tabpanel" aria-labelledby="mobile-menu-link">
+					<nav class="mobile-nav">
+						<ul class="mobile-menu">
+							<li class="active">
+								<a href="index.html">Home</a>
+
+								<ul>
+									<li><a href="index-1.html">01 - furniture store</a></li>
+									<li><a href="index-2.html">02 - furniture store</a></li>
+									<li><a href="index-3.html">03 - electronic store</a></li>
+									<li><a href="index-4.html">04 - electronic store</a></li>
+									<li><a href="index-5.html">05 - fashion store</a></li>
+									<li><a href="index-6.html">06 - fashion store</a></li>
+									<li><a href="index-7.html">07 - fashion store</a></li>
+									<li><a href="index-8.html">08 - fashion store</a></li>
+									<li><a href="index-9.html">09 - fashion store</a></li>
+									<li><a href="index-10.html">10 - shoes store</a></li>
+									<li>
+										<a href="index-11.html">11 - furniture simple store</a>
+									</li>
+									<li>
+										<a href="index-12.html">12 - fashion simple store</a>
+									</li>
+									<li><a href="index-13.html">13 - market</a></li>
+									<li><a href="index-14.html">14 - market fullwidth</a></li>
+									<li><a href="index-15.html">15 - lookbook 1</a></li>
+									<li><a href="index-16.html">16 - lookbook 2</a></li>
+									<li><a href="index-17.html">17 - fashion store</a></li>
+									<li>
+										<a href="index-18.html">18 - fashion store (with sidebar)</a>
+									</li>
+									<li><a href="index-19.html">19 - games store</a></li>
+									<li><a href="index-20.html">20 - book store</a></li>
+									<li><a href="index-21.html">21 - sport store</a></li>
+									<li><a href="index-22.html">22 - tools store</a></li>
+									<li>
+										<a href="index-23.html">23 - fashion left navigation store</a>
+									</li>
+									<li>
+										<a href="index-24.html">24 - extreme sport store</a>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<a href="#">Shop</a>
+								<ul>
+									<li><a href="category-list.html">Shop List</a></li>
+									<li>
+										<a href="category-2cols.html">Shop Grid 2 Columns</a>
+									</li>
+									<li><a href="#">Shop Grid 3 Columns</a></li>
+									<li>
+										<a href="category-4cols.html">Shop Grid 4 Columns</a>
+									</li>
+									<li>
+										<a href="category-boxed.html"><span>Shop Boxed No Sidebar<span class="tip tip-hot">Hot</span></span></a>
+									</li>
+									<li>
+										<a href="category-fullwidth.html">Shop Fullwidth No Sidebar</a>
+									</li>
+									<li>
+										<a href="product-category-boxed.html">Product Category Boxed</a>
+									</li>
+									<li>
+										<a href="product-category-fullwidth.html"><span>Product Category Fullwidth<span class="tip tip-new">New</span></span></a>
+									</li>
+									<li><a href="cart.html">Cart</a></li>
+									<li><a href="checkout.html">Checkout</a></li>
+									<li><a href="wishlist.html">Wishlist</a></li>
+									<li><a href="#">Lookbook</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="#" class="sf-with-ul">Product</a>
+								<ul>
+									<li><a href="#">Default</a></li>
+									<li><a href="product-centered.html">Centered</a></li>
+									<li>
+										<a href="product-extended.html"><span>Extended Info<span class="tip tip-new">New</span></span></a>
+									</li>
+									<li><a href="product-gallery.html">Gallery</a></li>
+									<li><a href="product-sticky.html">Sticky Info</a></li>
+									<li>
+										<a href="product-sidebar.html">Boxed With Sidebar</a>
+									</li>
+									<li><a href="product-fullwidth.html">Full Width</a></li>
+									<li>
+										<a href="product-masonry.html">Masonry Sticky Info</a>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<a href="#">Pages</a>
+								<ul>
+									<li>
+										<a href="about.html">About</a>
+
+										<ul>
+											<li><a href="about.html">About 01</a></li>
+											<li><a href="about-2.html">About 02</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="contact.html">Contact</a>
+
+										<ul>
+											<li><a href="contact.html">Contact 01</a></li>
+											<li><a href="contact-2.html">Contact 02</a></li>
+										</ul>
+									</li>
+									<li><a href="login.html">Login</a></li>
+									<li><a href="faq.html">FAQs</a></li>
+									<li><a href="404.html">Error 404</a></li>
+									<li><a href="coming-soon.html">Coming Soon</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="blog.html">Blog</a>
+
+								<ul>
+									<li><a href="blog.html">Classic</a></li>
+									<li><a href="blog-listing.html">Listing</a></li>
+									<li>
+										<a href="#">Grid</a>
+										<ul>
+											<li>
+												<a href="blog-grid-2cols.html">Grid 2 columns</a>
+											</li>
+											<li>
+												<a href="blog-grid-3cols.html">Grid 3 columns</a>
+											</li>
+											<li>
+												<a href="blog-grid-4cols.html">Grid 4 columns</a>
+											</li>
+											<li>
+												<a href="blog-grid-sidebar.html">Grid sidebar</a>
+											</li>
+										</ul>
+									</li>
+									<li>
+										<a href="#">Masonry</a>
+										<ul>
+											<li>
+												<a href="blog-masonry-2cols.html">Masonry 2 columns</a>
+											</li>
+											<li>
+												<a href="blog-masonry-3cols.html">Masonry 3 columns</a>
+											</li>
+											<li>
+												<a href="blog-masonry-4cols.html">Masonry 4 columns</a>
+											</li>
+											<li>
+												<a href="blog-masonry-sidebar.html">Masonry sidebar</a>
+											</li>
+										</ul>
+									</li>
+									<li>
+										<a href="#">Mask</a>
+										<ul>
+											<li>
+												<a href="blog-mask-grid.html">Blog mask grid</a>
+											</li>
+											<li>
+												<a href="blog-mask-masonry.html">Blog mask masonry</a>
+											</li>
+										</ul>
+									</li>
+									<li>
+										<a href="#">Single Post</a>
+										<ul>
+											<li><a href="single.html">Default with sidebar</a></li>
+											<li>
+												<a href="single-fullwidth.html">Fullwidth no sidebar</a>
+											</li>
+											<li>
+												<a href="single-fullwidth-sidebar.html">Fullwidth with sidebar</a>
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<a href="elements-list.html">Elements</a>
+								<ul>
+									<li><a href="elements-products.html">Products</a></li>
+									<li><a href="elements-typography.html">Typography</a></li>
+									<li><a href="elements-titles.html">Titles</a></li>
+									<li><a href="elements-banners.html">Banners</a></li>
+									<li>
+										<a href="elements-product-#">Product Category</a>
+									</li>
+									<li>
+										<a href="elements-video-banners.html">Video Banners</a>
+									</li>
+									<li><a href="elements-buttons.html">Buttons</a></li>
+									<li><a href="elements-accordions.html">Accordions</a></li>
+									<li><a href="elements-tabs.html">Tabs</a></li>
+									<li>
+										<a href="elements-testimonials.html">Testimonials</a>
+									</li>
+									<li><a href="elements-blog-posts.html">Blog Posts</a></li>
+									<li><a href="elements-portfolio.html">Portfolio</a></li>
+									<li><a href="elements-cta.html">Call to Action</a></li>
+									<li><a href="elements-icon-boxes.html">Icon Boxes</a></li>
+								</ul>
+							</li>
+						</ul>
+					</nav>
+					<!-- End .mobile-nav -->
+				</div>
+				<!-- .End .tab-pane -->
+				<div class="tab-pane fade" id="mobile-cats-tab" role="tabpanel" aria-labelledby="mobile-cats-link">
+					<nav class="mobile-cats-nav">
+						<ul class="mobile-cats-menu">
+							<li><a class="mobile-cats-lead" href="#">Daily offers</a></li>
+							<li><a class="mobile-cats-lead" href="#">Gift Ideas</a></li>
+							<li><a href="#">Beds</a></li>
+							<li><a href="#">Lighting</a></li>
+							<li><a href="#">Sofas & Sleeper sofas</a></li>
+							<li><a href="#">Storage</a></li>
+							<li><a href="#">Armchairs & Chaises</a></li>
+							<li><a href="#">Decoration </a></li>
+							<li><a href="#">Kitchen Cabinets</a></li>
+							<li><a href="#">Coffee & Tables</a></li>
+							<li><a href="#">Outdoor Furniture </a></li>
+						</ul>
+						<!-- End .mobile-cats-menu -->
+					</nav>
+					<!-- End .mobile-cats-nav -->
+				</div>
+				<!-- .End .tab-pane -->
+			</div>
+			<!-- End .tab-content -->
+
+			<div class="social-icons">
+				<a href="#" class="social-icon" target="_blank" title="Facebook"><i class="icon-facebook-f"></i></a>
+				<a href="#" class="social-icon" target="_blank" title="Twitter"><i class="icon-twitter"></i></a>
+				<a href="#" class="social-icon" target="_blank" title="Instagram"><i class="icon-instagram"></i></a>
+				<a href="#" class="social-icon" target="_blank" title="Youtube"><i class="icon-youtube"></i></a>
+			</div>
+			<!-- End .social-icons -->
+		</div>
+		<!-- End .mobile-menu-wrapper -->
+	</div>
+	<!-- End .mobile-menu-container -->
+
+	<!-- Sign in / Register Modal -->
+	<div class="modal fade" id="signin-modal" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<div class="modal-body">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true"><i class="icon-close"></i></span>
+					</button>
+
+					<div class="form-box">
+						<div class="form-tab">
+							<ul class="nav nav-pills nav-fill" role="tablist">
+								<li class="nav-item">
+									<a class="nav-link active" id="signin-tab" data-toggle="tab" href="#signin" role="tab" aria-controls="signin" aria-selected="true">Sign In</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" id="register-tab" data-toggle="tab" href="#register" role="tab" aria-controls="register" aria-selected="false">Register</a>
+								</li>
+							</ul>
+							<div class="tab-content" id="tab-content-5">
+								<div class="tab-pane fade show active" id="signin" role="tabpanel" aria-labelledby="signin-tab">
+									<form action="#">
+										<div class="form-group">
+											<label for="singin-email">Username or email address *</label>
+											<input type="text" class="form-control" id="singin-email" name="singin-email" required />
+										</div>
+										<!-- End .form-group -->
+
+										<div class="form-group">
+											<label for="singin-password">Password *</label>
+											<input type="password" class="form-control" id="singin-password" name="singin-password" required />
+										</div>
+										<!-- End .form-group -->
+
+										<div class="form-footer">
+											<button type="submit" class="btn btn-outline-primary-2">
+												<span>LOG IN</span>
+												<i class="icon-long-arrow-right"></i>
+											</button>
+
+											<div class="custom-control custom-checkbox">
+												<input type="checkbox" class="custom-control-input" id="signin-remember" />
+												<label class="custom-control-label" for="signin-remember">Remember Me</label>
+											</div>
+											<!-- End .custom-checkbox -->
+
+											<a href="#" class="forgot-link">Forgot Your Password?</a>
+										</div>
+										<!-- End .form-footer -->
+									</form>
+									<div class="form-choice">
+										<p class="text-center">or sign in with</p>
+										<div class="row">
+											<div class="col-sm-6">
+												<a href="#" class="btn btn-login btn-g">
+													<i class="icon-google"></i>
+													Login With Google
+												</a>
+											</div>
+											<!-- End .col-6 -->
+											<div class="col-sm-6">
+												<a href="#" class="btn btn-login btn-f">
+													<i class="icon-facebook-f"></i>
+													Login With Facebook
+												</a>
+											</div>
+											<!-- End .col-6 -->
+										</div>
+										<!-- End .row -->
+									</div>
+									<!-- End .form-choice -->
+								</div>
+								<!-- .End .tab-pane -->
+								<div class="tab-pane fade" id="register" role="tabpanel" aria-labelledby="register-tab">
+									<form action="#">
+										<div class="form-group">
+											<label for="register-email">Your email address *</label>
+											<input type="email" class="form-control" id="register-email" name="register-email" required />
+										</div>
+										<!-- End .form-group -->
+
+										<div class="form-group">
+											<label for="register-password">Password *</label>
+											<input type="password" class="form-control" id="register-password" name="register-password" required />
+										</div>
+										<!-- End .form-group -->
+
+										<div class="form-footer">
+											<button type="submit" class="btn btn-outline-primary-2">
+												<span>SIGN UP</span>
+												<i class="icon-long-arrow-right"></i>
+											</button>
+
+											<div class="custom-control custom-checkbox">
+												<input type="checkbox" class="custom-control-input" id="register-policy" required />
+												<label class="custom-control-label" for="register-policy">I agree to the
+													<a href="#">privacy policy</a> *</label>
+											</div>
+											<!-- End .custom-checkbox -->
+										</div>
+										<!-- End .form-footer -->
+									</form>
+									<div class="form-choice">
+										<p class="text-center">or sign in with</p>
+										<div class="row">
+											<div class="col-sm-6">
+												<a href="#" class="btn btn-login btn-g">
+													<i class="icon-google"></i>
+													Login With Google
+												</a>
+											</div>
+											<!-- End .col-6 -->
+											<div class="col-sm-6">
+												<a href="#" class="btn btn-login btn-f">
+													<i class="icon-facebook-f"></i>
+													Login With Facebook
+												</a>
+											</div>
+											<!-- End .col-6 -->
+										</div>
+										<!-- End .row -->
+									</div>
+									<!-- End .form-choice -->
+								</div>
+								<!-- .End .tab-pane -->
+							</div>
+							<!-- End .tab-content -->
+						</div>
+						<!-- End .form-tab -->
+					</div>
+					<!-- End .form-box -->
+				</div>
+				<!-- End .modal-body -->
+			</div>
+			<!-- End .modal-content -->
+		</div>
+		<!-- End .modal-dialog -->
+	</div>
+	<!-- End .modal -->
+
+	<!-- Pop-UP Start -->
+	<!-- Pop-UP End -->
+	<!-- Plugins JS File -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/bootstrap.bundle.min.js"></script>
+	<script src="assets/js/jquery.hoverIntent.min.js"></script>
+	<script src="assets/js/jquery.waypoints.min.js"></script>
+	<script src="assets/js/superfish.min.js"></script>
+	<script src="assets/js/owl.carousel.min.js"></script>
+	<script src="assets/js/bootstrap-input-spinner.js"></script>
+	<script src="assets/js/jquery.magnific-popup.min.js"></script>
+	<script src="assets/js/jquery.plugin.min.js"></script>
+	<script src="assets/js/jquery.countdown.min.js"></script>
+	<!-- Main JS File -->
+	<script src="assets/js/main.js"></script>
+	<script src="assets/js/demos/demo-14.js"></script>
+</body>
+
+<!-- molla/index-14.html  22 Nov 2019 09:59:54 GMT -->
+
 </html>
