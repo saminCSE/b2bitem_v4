@@ -110,7 +110,7 @@
 				<nav class="main-nav">
 					<ul class="menu sf-arrows">
 						<li>
-							<a href="#" class="sf-ul">Home</a>
+							<a href="<?= site_url('website') ?>" class="sf-ul">Home</a>
 						</li>
 						<li>
 							<a href="<?= site_url('product') ?>" class="sf-ul">Products</a>

@@ -355,7 +355,7 @@
 					<nav class="main-nav">
 						<ul class="menu sf-arrows">
 							<li>
-								<a href="#" class="sf-ul">Home</a>
+								<a href="<?= site_url('website') ?>" class="sf-ul">Home</a>
 							</li>
 							<li>
 								<a href="<?= site_url('product') ?>" class="sf-ul">Products</a>
@@ -1316,7 +1316,7 @@
 									<label class="text-lg-18 d-none text-muted">Item Category <span class="text-danger">*</span>
 									</label>
 									<div>
-										<select name="cat_id" id="cat_id" class="form-control text-md-down-14 rounded-0" style="height: 45px;">
+										<select name="cat_id" id="cat_id" class="form-control text-md-down-14 rounded-0" style="height: 45px; background: none;">
 											<option value="">-- Select Category --</option>
 											<?php foreach ($product_cat as $key => $cat) { ?>
 												<option value="<?= $cat['id']; ?>"> <?= $cat['category_name']; ?> </option>
