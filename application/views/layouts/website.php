@@ -11,7 +11,7 @@
 	</title>
 	<link rel="canonical" href="https://b2bitem.com" />
 
-	<link rel="icon" type="image/x-icon" href="assets/images/logo/B2B.png" />
+	<link rel="icon" type="image/x-icon" href="<?= base_url(); ?>assets/images/logo/B2B.png" />
 	<meta name="keywords" content="HTML5 Template" />
 	<meta name="description" content="Molla - Bootstrap eCommerce Template" />
 	<meta name="author" content="p-themes" />
@@ -25,20 +25,20 @@
 	<meta name="apple-mobile-web-app-title" content="Molla" />
 	<meta name="application-name" content="Molla" /> -->
 	<meta name="msapplication-TileColor" content="#cc9966" />
-	<meta name="msapplication-config" content="assets/images/icons/browserconfig.xml" />
+	<meta name="msapplication-config" content="<?= base_url(); ?>assets/images/icons/browserconfig.xml" />
 	<meta name="theme-color" content="#ffffff" />
-	<link rel="stylesheet" href="assets/vendor/line-awesome/line-awesome/line-awesome/css/line-awesome.min.css" />
+	<link rel="stylesheet" href="<?= base_url(); ?>assets/vendor/line-awesome/line-awesome/line-awesome/css/line-awesome.min.css" />
 	<!-- Plugins CSS File -->
-	<link rel="stylesheet" href="assets/css/bootstrap.min.css" />
-	<link rel="stylesheet" href="assets/css/plugins/owl-carousel/owl.carousel.css" />
-	<link rel="stylesheet" href="assets/css/plugins/magnific-popup/magnific-popup.css" />
-	<link rel="stylesheet" href="assets/css/plugins/jquery.countdown.css" />
+	<link rel="stylesheet" href="<?= base_url(); ?>assets/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="<?= base_url(); ?>assets/css/plugins/owl-carousel/owl.carousel.css" />
+	<link rel="stylesheet" href="<?= base_url(); ?>assets/css/plugins/magnific-popup/magnific-popup.css" />
+	<link rel="stylesheet" href="<?= base_url(); ?>assets/css/plugins/jquery.countdown.css" />
 	<!-- Main CSS File -->
-	<link rel="stylesheet" href="assets/css/style.css" />
-	<link rel="stylesheet" href="assets/css/b2b.css" />
-	<link rel="stylesheet" href="assets/css/skins/skin-demo-14.css" />
-	<link rel="stylesheet" href="assets/css/demos/demo-14.css" />
-	<link rel="stylesheet" href="assets/css/plugins/nouislider/nouislider.css" />
+	<link rel="stylesheet" href="<?= base_url(); ?>assets/css/style.css" />
+	<link rel="stylesheet" href="<?= base_url(); ?>assets/css/b2b.css" />
+	<link rel="stylesheet" href="<?= base_url(); ?>assets/css/skins/skin-demo-14.css" />
+	<link rel="stylesheet" href="<?= base_url(); ?>assets/css/demos/demo-14.css" />
+	<link rel="stylesheet" href="<?= base_url(); ?>assets/css/plugins/nouislider/nouislider.css" />
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
 	<!-- <link rel="stylesheet" href="assets/css/main.css" /> -->
@@ -276,21 +276,21 @@
 	<!-- Pop-UP Start -->
 	<!-- Pop-UP End -->
 	<!-- Plugins JS File -->
-	<script src="assets/js/jquery.min.js"></script>
-	<script src="assets/js/bootstrap.bundle.min.js"></script>
-	<script src="assets/js/jquery.hoverIntent.min.js"></script>
-	<script src="assets/js/jquery.waypoints.min.js"></script>
-	<script src="assets/js/superfish.min.js"></script>
-	<script src="assets/js/owl.carousel.min.js"></script>
-	<script src="assets/js/bootstrap-input-spinner.js"></script>
-	<script src="assets/js/jquery.magnific-popup.min.js"></script>
-	<script src="assets/js/jquery.plugin.min.js"></script>
-	<script src="assets/js/jquery.countdown.min.js"></script>
+	<script src="<?= base_url(); ?>assets/js/jquery.min.js"></script>
+	<script src="<?= base_url(); ?>assets/js/bootstrap.bundle.min.js"></script>
+	<script src="<?= base_url(); ?>assets/js/jquery.hoverIntent.min.js"></script>
+	<script src="<?= base_url(); ?>assets/js/jquery.waypoints.min.js"></script>
+	<script src="<?= base_url(); ?>assets/js/superfish.min.js"></script>
+	<script src="<?= base_url(); ?>assets/js/owl.carousel.min.js"></script>
+	<script src="<?= base_url(); ?>assets/js/bootstrap-input-spinner.js"></script>
+	<script src="<?= base_url(); ?>assets/js/jquery.magnific-popup.min.js"></script>
+	<script src="<?= base_url(); ?>assets/js/jquery.plugin.min.js"></script>
+	<script src="<?= base_url(); ?>assets/js/jquery.countdown.min.js"></script>
 	<!-- Main JS File -->
-	<script src="assets/js/main.js"></script>
-	<script src="assets/js/demos/demo-14.js"></script>
+	<script src="<?= base_url(); ?>assets/js/main.js"></script>
+	<script src="<?= base_url(); ?>assets/js/demos/demo-14.js"></script>
 
-	<script src="assets/js/jquery.elevateZoom.min.js"></script>
+	<script src="<?= base_url(); ?>assets/js/jquery.elevateZoom.min.js"></script>
 </body>
 
 <!-- molla/index-14.html  22 Nov 2019 09:59:54 GMT -->
