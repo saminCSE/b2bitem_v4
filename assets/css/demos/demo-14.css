@@ -815,6 +815,7 @@
 	border: 1px solid #e1e1e1;
 	border-radius: 5px;
 	overflow: hidden;
+	padding: 0 1.25rem 1.25rem;
 }
 
 .biz-box-title {
@@ -961,4 +962,313 @@ tr.table-unstyled td.td-unstyled img {
 	background-color: #bdd0d214;
 } */
 
+/* Define a new CSS class for aligning elements side by side */
+.country-info-container {
+	display: flex !important; /* Use flexbox to align items horizontally */
+	align-items: center !important; /* Center align items vertically */
+}
+
+/* Style the country flag within the container */
+.country-info-container span {
+	margin-right: 5px !important; /* Add right margin for spacing */
+	margin-top: -0.05rem !important; /* Adjust top margin if needed */
+}
+
+/* Style the country name text within the container */
+.country-info-container a.text-13 {
+	font-size: 13px; /* Set font size */
+	font-weight: 600; /* Set font weight to bold */
+	color: #6c757d; /* Set text color */
+	text-decoration: none; /* Remove underline */
+	margin-left: 5px; /* Add left margin for spacing */
+}
+
+/* Styling for elements inside <div class="sr-layout-block"> */
+
+.sr-layout-block {
+	padding: 30px 29px;
+	margin-bottom: 20px;
+	background: #fff;
+	border: 1px solid #e9eef4;
+}
+
+.sr-layout-block .sr-linkTo-comInfo {
+	cursor: pointer;
+}
+
+.sr-layout-block .com-place-one {
+	background-image: url(https://www.micstatic.com/landing/www/product/img/2017/product-detail/company_e5d54f69.png);
+	background-repeat: no-repeat;
+	background-size: 100%;
+	background-position: top left;
+	cursor: pointer;
+	position: relative;
+	padding: 20px 12px 20px 20px;
+}
+
+.sr-layout-block .sr-com {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.sr-layout-block .sr-com .sr-com-logo {
+	margin-right: 12px;
+	width: 50px;
+	height: 50px;
+	line-height: 50px;
+	border-radius: 4px;
+	overflow: hidden;
+}
+
+.sr-layout-block .sr-com .sr-com-logo img {
+	max-width: 100%;
+	max-height: 100%;
+	vertical-align: middle;
+}
+
+.sr-layout-block .sr-com .sr-com-info {
+	flex: 1;
+}
+
+.sr-layout-block .detail-pop360 {
+	position: absolute;
+	top: 20px;
+	right: 16px;
+	width: 26px;
+	height: 26px;
+	background: #fff;
+	border-radius: 50%;
+	color: #222;
+	font-size: 18px;
+	font-family: "Mic-icon";
+	text-align: center;
+	line-height: 26px;
+}
+
+.sr-layout-block .com-place-two .sign-item {
+	display: inline-flex;
+	align-items: center;
+	margin-right: 15px;
+	color: #555;
+}
+
+.sr-layout-block .com-place-two .sign-item .item-icon {
+	width: 20px;
+	height: 20px;
+	margin-right: 3px;
+	vertical-align: middle;
+}
+
+.sr-layout-block .com-place-two .review-scores {
+	margin-top: 5px;
+	cursor: default;
+}
+
+.sr-layout-block .com-place-two .review-scores .score-item-rating span {
+	cursor: pointer;
+	font-weight: bold;
+	vertical-align: middle;
+}
+
+.sr-layout-block .com-place-three {
+	padding: 10px 20px 15px;
+}
+
+.sr-layout-block .com-place-three .mod-2 .info-item.info-businessType {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+}
+
+.custom-layout-block {
+	margin-bottom: 20px;
+}
+
+/* Supplier info styles */
+.custom-theme-block {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	padding: 1rem;
+	background-color: #fff;
+	border: 1px solid #ccc;
+}
+
+.custom-heading {
+	font-size: 1.9rem;
+	font-weight: bold;
+	border-bottom: 1px solid #ccc;
+	padding-bottom: 0.5rem;
+	margin-bottom: 1rem;
+}
+
+.custom-text-large {
+	font-size: 1.2rem;
+}
+
+.custom-text-xl {
+	font-size: 1.5rem;
+}
+
+.custom-text-strong {
+	font-weight: bold;
+}
+
+.custom-supplier-info {
+	display: flex;
+	align-items: center;
+	margin-bottom: 1rem;
+}
+
+.custom-flag-container img {
+	width: 16px;
+	margin-right: 5px;
+}
+
+.custom-country-name {
+	flex-grow: 1;
+	font-weight: 500;
+}
+
+.custom-paragraph {
+	margin-bottom: 1rem;
+	font-weight: 400;
+}
+
+.custom-business-type {
+	margin-bottom: 1rem;
+}
+
+.custom-business-type-list {
+	/* display: flex; */
+	flex-wrap: wrap;
+}
+
+.custom-business-type-list .custom-text-muted {
+	margin-right: 10px;
+}
+
+.custom-contact-info {
+	display: flex;
+	align-items: center;
+	margin-bottom: 1rem;
+}
+
+.custom-contact-icon {
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	border: 1px solid #ccc;
+	border-radius: 50%;
+	margin-right: 10px;
+}
+
+.custom-link {
+	display: flex;
+	align-items: center;
+	margin-bottom: 1rem;
+}
+
+/* .custom-box-icon {
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	margin-right: 10px;
+} */
+
+.custom-icon {
+	font-size: 16px;
+}
+
+/* Button styles */
+.custom-btn-product,
+.custom-btn {
+	display: inline-block;
+	padding: 10px 20px;
+	margin-right: 10px;
+	border: 1px solid transparent;
+	border-radius: 5px;
+	text-decoration: none;
+	cursor: pointer;
+	background-color: #007bff;
+	color: #fff;
+}
+
+.custom-btn:hover,
+.custom-btn-product:hover {
+	background-color: #0056b3;
+}
+
+.custom-box-icon {
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	text-align: center;
+	line-height: 30px;
+	border: 1px solid #ccc;
+	border-radius: 50%;
+}
+
+.custom-contact-icon {
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	text-align: center;
+	line-height: 30px;
+	border: 1px solid #ccc;
+	border-radius: 50%;
+	transition: background-color 0.3s ease;
+}
+
+.custom-text-muted {
+	color: #161414;
+	transition: color 0.3s ease;
+}
+
+.custom-contact-number {
+	font-weight: bold;
+	margin-left: 5px;
+	transition: color 0.3s ease;
+}
+
+.custom-contact-info:hover .custom-contact-icon {
+	background-color: #f0f0f0; /* Change background color on hover */
+}
+
+.custom-contact-info:hover .custom-text-muted,
+.custom-contact-info:hover .custom-contact-number {
+	color: #333; /* Change text color on hover */
+}
+
+.custom-business-type-list {
+	list-style-type: disc; /* Use small filled circle as bullet point */
+	color: #333; /* Color of the bullet point */
+	margin-left: 20px; /* Adjust left margin for indentation */
+}
+
+.model {
+	font-weight: 600;
+}
+
+/* end new-1 */
+
+/* start new-2 */
+.supplier-name {
+	margin-top: 10px;
+}
+
+.supplier-name h7 {
+	font-size: 14px;
+	font-weight: normal;
+	color: #333;
+}
 /* end new-1 */

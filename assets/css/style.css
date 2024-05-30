@@ -2294,6 +2294,29 @@ blockquote.text-white cite span {
 		transform: translateY(0);
 	}
 }
+
+/* @media screen and (min-width: 992px) {
+	.sticky-header.fixed {
+		position: fixed;
+		left: 0;
+		right: 0;
+		top: 0;
+		z-index: 1040;
+		animation-name: fixedHeader;
+		animation-duration: 0.4s;
+		background-color: #fff;
+		box-shadow: 0 3px 6px rgba(51, 51, 51, 0.05);
+	}
+	.sticky-header.fixed .logo {
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+	.sticky-header.fixed.header-middle .menu > li > a {
+		padding-top: 2rem;
+		padding-bottom: 2rem;
+	}
+} */
+
 @media screen and (min-width: 992px) {
 	.sticky-header.fixed {
 		position: fixed;
@@ -2314,7 +2337,28 @@ blockquote.text-white cite span {
 		padding-top: 2rem;
 		padding-bottom: 2rem;
 	}
+
+	.sticky-header-2.fixed {
+		position: fixed;
+		left: 0;
+		right: 0;
+		top: 85px; /* Adjust this value based on the height of sticky-header */
+		z-index: 1030; /* Slightly lower than sticky-header to ensure it appears below */
+		animation-name: fixedHeader;
+		animation-duration: 0.4s;
+		background-color: #fff;
+		box-shadow: 0 3px 6px rgba(51, 51, 51, 0.05);
+	}
+	.sticky-header-2.fixed .logo {
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+	.sticky-header-2.fixed.header-middle .menu > li > a {
+		padding-top: 2rem;
+		padding-bottom: 2rem;
+	}
 }
+
 .mobile-menu-container {
 	position: fixed;
 	left: -280px;
