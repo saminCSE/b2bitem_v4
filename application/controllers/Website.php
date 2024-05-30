@@ -120,6 +120,9 @@ class Website extends Frontend_Controller
 		$productlist = $this->websitemodel->get_product_list();
 		$this->assign('productlist', $productlist);
 
+		$productlist2 = $this->websitemodel->get_product_top12_list();
+		$this->assign('productlist2', $productlist2);
+
 		$sellercompany = $this->websitemodel->get_new_seller_compnay_list();
 		$this->assign('sellercompany', $sellercompany);
 

@@ -2,451 +2,297 @@
 <html lang="en">
 
 <head>
-	<meta charset="UTF-8">
-	<!--link rel="preload" href="https://b2bitem.com/public/frontend/css/bootstrap.min.css" as="style" /-->
-
-	<title>B2B Marketplace for Importers, Exporters and Manufacturers - Largest B2B Business Platform</title>
-
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+	<title>
+		B2B Marketplace for Importers, Exporters and Manufacturers - Largest B2B
+		Business Platform
+	</title>
 	<link rel="canonical" href="https://b2bitem.com" />
 
-	<link rel="icon" type="image/x-icon" href="https://b2bitem.com/upload/fav.png" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" type="text/css" href="<?= base_url(); ?>/public/frontend/css/bootstrap.min.css">
-	<link rel="stylesheet" href="https://b2bmap.com/public/font/fonts.css">
+	<link rel="icon" type="image/x-icon" href="assets/images/logo/B2B.png" />
+	<meta name="keywords" content="HTML5 Template" />
+	<meta name="description" content="Molla - Bootstrap eCommerce Template" />
+	<meta name="author" content="p-themes" />
+	<!-- Favicon -->
+	<!-- <link rel="apple-touch-icon" sizes="180x180" href="assets/images/icons/apple-touch-icon.png" />
+	<link rel="icon" type="image/png" sizes="32x32" href="assets/images/icons/favicon-32x32.png" />
+	<link rel="icon" type="image/png" sizes="16x16" href="assets/images/icons/favicon-16x16.png" />
+	<link rel="manifest" href="assets/images/icons/site.html" />
+	<link rel="mask-icon" href="assets/images/icons/safari-pinned-tab.svg" color="#666666" />
+	<link rel="shortcut icon" href="assets/images/icons/favicon.ico" />
+	<meta name="apple-mobile-web-app-title" content="Molla" />
+	<meta name="application-name" content="Molla" /> -->
+	<meta name="msapplication-TileColor" content="#cc9966" />
+	<meta name="msapplication-config" content="assets/images/icons/browserconfig.xml" />
+	<meta name="theme-color" content="#ffffff" />
+	<link rel="stylesheet" href="assets/vendor/line-awesome/line-awesome/line-awesome/css/line-awesome.min.css" />
+	<!-- Plugins CSS File -->
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="assets/css/plugins/owl-carousel/owl.carousel.css" />
+	<link rel="stylesheet" href="assets/css/plugins/magnific-popup/magnific-popup.css" />
+	<link rel="stylesheet" href="assets/css/plugins/jquery.countdown.css" />
+	<!-- Main CSS File -->
+	<link rel="stylesheet" href="assets/css/style.css" />
+	<link rel="stylesheet" href="assets/css/b2b.css" />
+	<link rel="stylesheet" href="assets/css/skins/skin-demo-14.css" />
+	<link rel="stylesheet" href="assets/css/demos/demo-14.css" />
+	<link rel="stylesheet" href="assets/css/plugins/nouislider/nouislider.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
-	<link rel="stylesheet" type="text/css" href="<?= base_url(); ?>public/frontend/css/font-awesome-4.7.0/css/font-awesome.min.css">
-	<!--link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"-->
+	<!-- <link rel="stylesheet" href="assets/css/main.css" /> -->
+	<!-- <link rel="stylesheet" type="text/css" href="<?= base_url(); ?>public/frontend/css/b2b.css"> -->
 	<link rel="stylesheet" type="text/css" href="<?= base_url(); ?>public/frontend/css/icofont/icofont.min.css">
-	<link rel="stylesheet" type="text/css" href="<?= base_url(); ?>public/frontend/css/main.css">
 	<link rel="stylesheet" type="text/css" href="<?= base_url(); ?>public/frontend/css/googlefonts.css">
-
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-121345574-1" type="d257963e33dac07492b9d6fd-text/javascript"></script>
-	<script type="d257963e33dac07492b9d6fd-text/javascript">
-		window.dataLayer = window.dataLayer || [];
-
-		function gtag() {
-			dataLayer.push(arguments);
-		}
-		gtag('js', new Date());
-		gtag('config', 'UA-121345574-1');
-	</script>
-	<script type="d257963e33dac07492b9d6fd-text/javascript">
-		window._mfq = window._mfq || [];
-		(function() {
-			var mf = document.createElement("script");
-			mf.type = "text/javascript";
-			mf.defer = true;
-			mf.src = "//cdn.mouseflow.com/projects/a1f1aadc-00f2-4c6b-904d-cbc3668b3d15.js";
-			document.getElementsByTagName("head")[0].appendChild(mf);
-		})();
-	</script>
-	<script type="text/javascript" src="<?= base_url(); ?>public/frontend/js/jquery-3.4.1.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="<?= base_url(); ?>public/frontend/css/font-awesome-4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
-	<div class="desktop-view-nav mb-3">
-		<nav class="navbar navbar-expand-lg biz-header">
-			<div class="container custom-container">
-				<div class="scroll-show-item">
-					<div class="d-flex align-items-center">
-						<div class="header-single-menu-drop dropdown mr-2">
-							<a href="#" class="btn btn-sm" data-toggle="dropdown">
-								<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu">
-									<line x1="3" y1="12" x2="21" y2="12"></line>
-									<line x1="3" y1="6" x2="21" y2="6"></line>
-									<line x1="3" y1="18" x2="21" y2="18"></line>
-								</svg>
-							</a>
-							<div class="dropdown-menu rounded-0">
-								<a href="#" class="dropdown-item d-flex">
-									<span class="mr-2">
-										<i class="fa fa-home link-icon"></i>
-									</span> Home </a>
-								<a href="<?= site_url('product'); ?>" class="dropdown-item d-flex">
-									<span class="mr-2">
-										<i class="fa fa-cube link-icon"></i>
-									</span> Products </a>
-
-								<a href="#" class="dropdown-item d-flex">
-									<span class="mr-2">
-										<i class="fa fa-eraser link-icon"></i>
-									</span> B2B Leads </a>
-								<a href="#" class="dropdown-item d-flex">
-									<span class="mr-2">
-										<i class="fa fa-industry link-icon"></i>
-									</span> Companies </a>
-							</div>
-						</div>
-						<a class="navbar-brand small-brand" href="https://b2bitem.com/">
-							<img src="https://b2bitem.com/upload/b2bitem.png" class="img-fluid">
-
-						</a>
-					</div>
-				</div>
-				<a class="navbar-brand" href="https://b2bitem.com/">
-
-					<img src="https://b2bitem.com/upload/b2bitem.png" class="img-fluid">
-				</a>
-
-				<?php if (empty($this->session->userdata('company_id'))) { ?>
-
-					<ul class="nav navbar-nav flex-row flex-nowrap align-items-center order-lg-10 ml-auto">
-						<li class="nav-item mr-2">
-							<a href="<?= site_url('login'); ?>" class="nav-link text-them">
-								<span class="ml-2">Sign In</span>
-							</a>
-						</li>
-						<li class="nav-item">
-							<a href="<?= site_url('register'); ?>" class="d-block text-nowrap text-14 text-medium text-white py-0 px-2 rounded btn-join-free">Join Free</a>
-						</li>
-					</ul>
-				<?php } else { ?>
-					<div class="d-flex align-items-center ml-auto">
-						<div class="nav-link pr-0 dropdown header-user">
-							<div data-toggle="dropdown" class="px-2 cursor">
-								<span class="box-30 cursor rounded-circle bg-login-icon" style="background-color: #021b79;color: #fff;">
-									<i class="icofont-ui-user text-14"></i>
-								</span>
-							</div>
-							<div class="dropdown-menu dropdown-menu-right shadow-sm mr-n2 p-3">
-								<ul class="list-group list-group-flush mb-0">
-									<li class="list-group-item px-0 py-2">
-										<a href="#" class="dropdown-item px-0 d-flex text-17">
-											<span class="mr-2">
-												<i class="fa fa-dashboard  link-icon"></i>
-											</span> Dashboard </a>
-									</li>
-									<li class="list-group-item px-0 py-2">
-										<a href="#" class="dropdown-item px-0 d-flex text-17">
-											<span class="mr-2">
-												<i class="fa fa-envelope-o link-icon"></i>
-											</span> Message Center </a>
-									</li>
-									<li class="list-group-item px-0 py-2">
-										<a href="#" class="dropdown-item px-0 d-flex text-17">
-											<span class="mr-2">
-												<i class="icofont-architecture-alt link-icon"></i>
-											</span> Update Profile </a>
-									</li>
-									<li class="list-group-item px-0 py-2">
-										<a href="#" class="dropdown-item px-0 d-flex text-17">
-											<span class="mr-2">
-												<i class="fa fa-cube link-icon"></i>
-											</span> My Products </a>
-									</li>
-									<li class="list-group-item px-0 py-2">
-										<div>
-											<a href="#" class="dropdown-item px-0 text-17 text-wrap">
-												<span class="d-block">Submit Buy Requirement</span>
-												<small class="d-block">Submit your buying needs to get quotes from top suppliers.</small>
-											</a>
-										</div>
-									</li>
-									<li class="list-group-item px-0 py-2">
-										<a href="#" class="dropdown-item px-0 d-flex text-17">
-											<span class="mr-2">
-												<i class="fa fa-sign-out text-14 link-icon"></i>
-											</span> Logout </a>
-									</li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				<?php } ?>
-
-				<button class="navbar-toggler border" type="button" data-toggle="collapse" data-target="#header">
-					<i class="fa fa-bars"></i>
-				</button>
-				<!-- <div class="collapse navbar-collapse" id="header">
-            <div class="d-flex justify-content-between w-100">
-              <div class="d-flex flex-wrap mx-auto">
-                <div class="biz-header-search mr-3">
-                  <form method="get" action="#">
-                    <div class="biz-header-search-group">
-                      <input type="text" name="keyword" value="" title="Start search here" id="searchKeyword" placeholder="Search..." required aria-label="keyword">
-                      <button type="submit" class="btn text-nowrap search-btn">Search</button>
-                    </div>
-                  </form>
-                </div>
-                <div class="nav-item dropdown">
-                  <a href="#" title="'Post Buy Requirement" class="btn btn-dark bg-theme">Post Buy Requirement</a>
-                </div>
-              </div>
-              <div>
-                <ul class="nav navbar-nav flex-row flex-nowrap nav-on-responsive">
-                  <li class="nav-item dropdown mr-2">
-                    <a href="#" class="nav-link text-nowrap text-theme">Sell More</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div> -->
-			</div>
-		</nav>
-		<nav class="navbar navbar-expand-lg biz-menubar">
-			<div class="container custom-container">
-				<div class="collapse navbar-collapse show" id="bizMenubar">
-					<ul class="navbar-nav biz-menu">
-						<li class="nav-item invisible d-lg-down-none">
-							<span class="px-5">B2bItem</span>
-						</li>
-						<li class="nav-item">
-							<a href="http://b2bitem.com/" class="d-block">Home</a>
-						</li>
-						<li class="nav-item ">
-							<a href="<?= site_url('product'); ?>" class="d-block">Products</a>
-						</li>
-
-						<li class="nav-item ">
-							<a href="<?= site_url('b2bleads'); ?>" class="d-block">B2B Leads</a>
-						</li>
-						<li class="nav-item ">
-							<a href="<?= site_url('companies'); ?>" class="d-block">Companies</a>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</nav>
+	<div class="page-wrapper">
+		<?php echo $content_for_layout; ?>
 	</div>
-	<div class="mobile-view-nav mb-3">
-		<nav class="navbar navbar-expand-lg biz-header py-2">
-			<div class="container custom-container px-sm-3">
-				<div class="d-flex align-items-center w-100">
-					<div class="d-flex align-items-center">
-						<a class="navbar-brand small-brand" href="#">
-							<!-- <img src="https://b2bitem.com/public/logo/b2bitem-logo.jpg" class="img-fluid"> -->
-							B2BITEM
-						</a>
-						<a class="navbar-brand mw-navbar-brand" href="#">
-							<!-- <img src="https://b2bitem.com/public/logo/b2bitem-logo.jpg" class="img-fluid"> -->
-							B2BITEM
-						</a>
-					</div>
-					<div class="d-flex align-items-center ml-auto">
-						<div class="mr-2">
-							<a href="<?= site_url('register'); ?>" class="nav-link px-0">
-								<span class="btn text-nowrap btn-join-free py-0">Join Free</span>
-							</a>
-						</div>
-					</div>
+	<!-- End .page-wrapper -->
+	<button id="scroll-top" title="Back to Top">
+		<i class="icon-arrow-up"></i>
+	</button>
 
+	<!-- Mobile Menu -->
+	<div class="mobile-menu-overlay"></div>
+	<!-- End .mobil-menu-overlay -->
 
+	<div class="mobile-menu-container">
+		<div class="mobile-menu-wrapper">
+			<span class="mobile-menu-close"><i class="icon-close"></i></span>
 
-					<div class="header-single-menu-drop dropdown">
-						<a href="javascript:void(0)" class="btn btn-sm no-focus pl-2" data-toggle="dropdown">
-							<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu text-theme">
-								<line x1="3" y1="12" x2="21" y2="12"></line>
-								<line x1="3" y1="6" x2="21" y2="6"></line>
-								<line x1="3" y1="18" x2="21" y2="18"></line>
-							</svg>
-						</a>
-						<div class="dropdown-menu dropdown-menu-right mw-dropdown-menu-with-search shadow-sm rounded-0 px-3 pt-3 pb-4">
-							<ul class="list-group list-group-flush mb-0">
-								<li class="list-group-item px-0 py-1 border-bottom-0">
-									<form method="get" action="#">
-										<div class="input-group">
-											<input type="text" name="keyword" value="" title="Start search here" class="form-control form-control-sm no-focus" id="dropSearchKeyword" required placeholder="Search...">
-											<div class="input-group-append">
-												<button type="submit" class="input-group-text">
-													<i class="fa fa-search"></i>
-												</button>
-											</div>
-										</div>
-									</form>
+			<form action="#" method="get" class="mobile-search">
+				<label for="mobile-search" class="sr-only">Search</label>
+				<input type="search" class="form-control" name="mobile-search" id="mobile-search" placeholder="Search in..." required />
+				<button class="btn btn-primary" type="submit">
+					<i class="icon-search"></i>
+				</button>
+			</form>
+
+			<ul class="nav nav-pills-mobile" role="tablist">
+				<li class="nav-item">
+					<a class="nav-link active" id="mobile-menu-link" data-toggle="tab" href="#mobile-menu-tab" role="tab" aria-controls="mobile-menu-tab" aria-selected="true">Menu</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" id="mobile-cats-link" data-toggle="tab" href="#mobile-cats-tab" role="tab" aria-controls="mobile-cats-tab" aria-selected="false">Categories</a>
+				</li>
+			</ul>
+
+			<div class="tab-content">
+				<div class="tab-pane fade show active" id="mobile-menu-tab" role="tabpanel" aria-labelledby="mobile-menu-link">
+					<nav class="mobile-nav">
+						<ul class="mobile-menu">
+							<li class="active">
+								<a href="#" class="sf-ul">Home</a>
+							</li>
+							<li>
+								<a href="<?= site_url('product') ?>" class="sf-ul">Products</a>
+							</li>
+							<li>
+								<a href="<?= site_url('b2bleads') ?>" class="sf-ul">B2B Leads</a>
+							</li>
+							<li>
+								<a href="<?= site_url('companies') ?>" class="sf-ul">Companies</a>
+							</li>
+						</ul>
+					</nav>
+					<!-- End .mobile-nav -->
+				</div>
+				<!-- .End .tab-pane -->
+				<!-- <div class="tab-pane fade" id="mobile-cats-tab" role="tabpanel" aria-labelledby="mobile-cats-link">
+					<nav class="mobile-cats-nav">
+						<ul class="mobile-cats-menu">
+							<?php foreach ($product_cat as $key => $val) {
+								$catname = $val['category_name'];
+								$slag = $val['link_prefix'];
+							?>
+								<li><a href="<?= site_url('category/' . $slag); ?>"><?= $catname; ?></a></li>
+							<?php } ?>
+						</ul>
+
+					</nav>
+
+				</div> -->
+				<!-- .End .tab-pane -->
+			</div>
+			<!-- End .tab-content -->
+
+			<div class="social-icons">
+				<a href="#" class="social-icon" target="_blank" title="Facebook"><i class="icon-facebook-f"></i></a>
+				<a href="#" class="social-icon" target="_blank" title="Twitter"><i class="icon-twitter"></i></a>
+				<a href="#" class="social-icon" target="_blank" title="Instagram"><i class="icon-instagram"></i></a>
+				<a href="#" class="social-icon" target="_blank" title="Youtube"><i class="icon-youtube"></i></a>
+			</div>
+			<!-- End .social-icons -->
+		</div>
+		<!-- End .mobile-menu-wrapper -->
+	</div>
+	<!-- End .mobile-menu-container -->
+
+	<!-- Sign in / Register Modal -->
+	<div class="modal fade" id="signin-modal" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<div class="modal-body">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true"><i class="icon-close"></i></span>
+					</button>
+
+					<div class="form-box">
+						<div class="form-tab">
+							<ul class="nav nav-pills nav-fill" role="tablist">
+								<li class="nav-item">
+									<a class="nav-link active" id="signin-tab" data-toggle="tab" href="#signin" role="tab" aria-controls="signin" aria-selected="true">Sign In</a>
 								</li>
-								<li class="list-group-item px-0 py-2">
-									<a href="#" class="dropdown-item px-0 d-flex text-17">
-										<span class="mr-2">
-											<i class="fa fa-home link-icon"></i>
-										</span> Home </a>
-								</li>
-								<li class="list-group-item px-0 py-2">
-									<a href="#" class="dropdown-item px-0 d-flex text-17">
-										<span class="mr-2">
-											<i class="fa fa-cube link-icon"></i>
-										</span> Products </a>
-								</li>
-								<!-- <li class="list-group-item px-0 py-2">
-                    <a href="<?= site_url('website/business_directory'); ?>" class="dropdown-item px-0 d-flex text-17">
-                      <span class="mr-2">
-                        <i class="fa fa-list-ul link-icon"></i>
-                      </span> Company Directory </a>
-                  </li> -->
-								<li class="list-group-item px-0 py-2">
-									<a href="#" class="dropdown-item px-0 d-flex text-17">
-										<span class="mr-2">
-											<i class="fa fa-eraser link-icon"></i>
-										</span> B2B Offers </a>
-								</li>
-								<li class="list-group-item px-0 py-2">
-									<a href="<?= site_url('website/companies'); ?>" class="dropdown-item px-0 d-flex text-17">
-										<span class="mr-2">
-											<i class="fa fa-industry link-icon"></i>
-										</span> Companies </a>
+								<li class="nav-item">
+									<a class="nav-link" id="register-tab" data-toggle="tab" href="#register" role="tab" aria-controls="register" aria-selected="false">Register</a>
 								</li>
 							</ul>
-							<div class="mt-4">
-								<a href="#" class="btn text-nowrap btn-b2bmap-secondary btn-block text-17">Join Free Now</a>
-								<div class="py-2"></div>
-								<a href="#" class="btn btn-outline-dark btn-block text-17">Login</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</nav>
-	</div>
+							<div class="tab-content" id="tab-content-5">
+								<div class="tab-pane fade show active" id="signin" role="tabpanel" aria-labelledby="signin-tab">
+									<form action="#">
+										<div class="form-group">
+											<label for="singin-email">Username or email address *</label>
+											<input type="text" class="form-control" id="singin-email" name="singin-email" required />
+										</div>
+										<!-- End .form-group -->
 
-	<main class="main-body">
-		<?php echo $content_for_layout; ?>
-	</main>
+										<div class="form-group">
+											<label for="singin-password">Password *</label>
+											<input type="password" class="form-control" id="singin-password" name="singin-password" required />
+										</div>
+										<!-- End .form-group -->
 
-	<footer class="footer">
-		<div class="container custom-container">
-			<div>
-				<div class="row">
-					<div class="col-md-4 col-lg-3 mb-3 mb-md-0">
-						<div class="toggle-item">
-							<a class="navbar-brand px-0 mb-3 mb-md-2 pt-0" href="#">
-								<!-- <img src="https://b2bitem.com/public/logo/b2bitem-logo-white.png" class="img-fluid"> -->B2BITEM
-							</a>
-							<div class="d-md-none">
-								<a href="#" class="btn no-focus btn-sm footer-toogle-btn btn-block text-left content-toggler">
-									<i class="fa fa-angle-down mr-2 toggler-icon"></i> Menu </a>
-							</div>
-							<div class="footer-mw-dropdown-content toggleable-content">
-								<div class="pt-3 pt-md-0">
-									<ul class="footer-nav-list">
-										<li class="footer-nav-item">
-											<a href="#" class="footer-nav-link">--</a>
-										</li>
+										<div class="form-footer">
+											<button type="submit" class="btn btn-outline-primary-2">
+												<span>LOG IN</span>
+												<i class="icon-long-arrow-right"></i>
+											</button>
 
-									</ul>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-4 col-lg-3 mb-3 mb-md-0">
-						<div class="toggle-item">
-							<div class="d-md-none">
-								<a href="#" class="btn no-focus btn-sm footer-toogle-btn btn-block text-left content-toggler">
-									<i class="fa fa-angle-down mr-2 toggler-icon"></i> Seller Corner </a>
-							</div>
-							<div class="footer-mw-dropdown-content toggleable-content">
-								<div class="pt-3">
-									<div class="d-md-down-none">
-										<h5 class="footer-heading">Seller Corner</h5>
-									</div>
-									<ul class="footer-nav-list mb-4">
-										<li class="footer-nav-item">
-
-										</li>
-
-									</ul>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-4 col-lg-3 mb-3 mb-md-0">
-						<div class="toggle-item">
-							<div class="d-md-none">
-								<a href="#" class="btn no-focus btn-sm footer-toogle-btn btn-block text-left content-toggler">
-									<i class="fa fa-angle-down mr-2 toggler-icon"></i>Buyer Corner</a>
-							</div>
-							<div class="footer-mw-dropdown-content toggleable-content">
-								<div class="pt-3">
-									<div class="d-md-down-none">
-										<h5 class="footer-heading">Buyer Corner</h5>
-									</div>
-									<ul class="footer-nav-list">
-										<li class="footer-nav-item">
-											<a href="#" class="footer-nav-link">Post Your Buy Requirement</a>
-										</li>
-
-									</ul>
-									<ul class="footer-nav-list mb-4">
-										<li class="footer-nav-item">
-											<a href="#" class="footer-nav-link">Global Business Directory</a>
-										</li>
-										<li class="footer-nav-item">
-											<a href="#" class="footer-nav-link">List of Companies</a>
-										</li>
-									</ul>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-4 col-lg-3 mb-3 mb-md-0">
-						<div class="toggle-item">
-							<div class="d-md-none">
-								<a href="#" class="btn no-focus btn-sm footer-toogle-btn btn-block text-left content-toggler">
-									<i class="fa fa-angle-down mr-2 toggler-icon"></i> Contact B2Bitem </a>
-							</div>
-							<div class="footer-mw-dropdown-content toggleable-content">
-								<div class="pt-3">
-									<div class="d-md-down-none">
-										<h5 class="footer-heading">Contact </h5>
-									</div>
-									<ul class="footer-nav-list mb-md-4 mb-lg-5">
-										<li class="footer-nav-item">
-											<a href="#" target="_blank" class="footer-nav-link d-flex">
-												<span class="w-25px mt-05 mr-2">
-													<i class="fa fa-lightbulb-o text-18"></i>
-												</span>
-												<span>Registered Member Support</span>
-											</a>
-										</li>
-										<li class="footer-nav-item">
-											<a href="#" target="_blank" class="footer-nav-link d-flex">
-												<span class="w-25px mt-05 mr-2">
-													<i class="fa fa fa-commenting text-18"></i>
-												</span>
-												<span>Ask an Agent or Messege Us</span>
-											</a>
-										</li>
-										<li class="footer-nav-item">
-											<div class="footer-nav-link d-flex">
-												<span class="w-25px mt-05 mr-2">
-													<i class="fa fa-phone text-18"></i>
-												</span>
-												<span>+88(0) 1552*****</span>
+											<div class="custom-control custom-checkbox">
+												<input type="checkbox" class="custom-control-input" id="signin-remember" />
+												<label class="custom-control-label" for="signin-remember">Remember Me</label>
 											</div>
-										</li>
-									</ul>
-									<div class="d-md-down-none">
-										<div class="col-xl-9 px-0 mb-3">
-											<a href="<?= site_url('register'); ?>" class="btn btn-sm btn-block btn-b2bmap-secondary-close">Join Free Now</a>
-										</div>
-										<div class="col-xl-9 px-0 ">
+											<!-- End .custom-checkbox -->
 
+											<a href="#" class="forgot-link">Forgot Your Password?</a>
 										</div>
+										<!-- End .form-footer -->
+									</form>
+									<div class="form-choice">
+										<p class="text-center">or sign in with</p>
+										<div class="row">
+											<div class="col-sm-6">
+												<a href="#" class="btn btn-login btn-g">
+													<i class="icon-google"></i>
+													Login With Google
+												</a>
+											</div>
+											<!-- End .col-6 -->
+											<div class="col-sm-6">
+												<a href="#" class="btn btn-login btn-f">
+													<i class="icon-facebook-f"></i>
+													Login With Facebook
+												</a>
+											</div>
+											<!-- End .col-6 -->
+										</div>
+										<!-- End .row -->
 									</div>
+									<!-- End .form-choice -->
 								</div>
+								<!-- .End .tab-pane -->
+								<div class="tab-pane fade" id="register" role="tabpanel" aria-labelledby="register-tab">
+									<form action="#">
+										<div class="form-group">
+											<label for="register-email">Your email address *</label>
+											<input type="email" class="form-control" id="register-email" name="register-email" required />
+										</div>
+										<!-- End .form-group -->
+
+										<div class="form-group">
+											<label for="register-password">Password *</label>
+											<input type="password" class="form-control" id="register-password" name="register-password" required />
+										</div>
+										<!-- End .form-group -->
+
+										<div class="form-footer">
+											<button type="submit" class="btn btn-outline-primary-2">
+												<span>SIGN UP</span>
+												<i class="icon-long-arrow-right"></i>
+											</button>
+
+											<div class="custom-control custom-checkbox">
+												<input type="checkbox" class="custom-control-input" id="register-policy" required />
+												<label class="custom-control-label" for="register-policy">I agree to the
+													<a href="#">privacy policy</a> *</label>
+											</div>
+											<!-- End .custom-checkbox -->
+										</div>
+										<!-- End .form-footer -->
+									</form>
+									<div class="form-choice">
+										<p class="text-center">or sign in with</p>
+										<div class="row">
+											<div class="col-sm-6">
+												<a href="#" class="btn btn-login btn-g">
+													<i class="icon-google"></i>
+													Login With Google
+												</a>
+											</div>
+											<!-- End .col-6 -->
+											<div class="col-sm-6">
+												<a href="#" class="btn btn-login btn-f">
+													<i class="icon-facebook-f"></i>
+													Login With Facebook
+												</a>
+											</div>
+											<!-- End .col-6 -->
+										</div>
+										<!-- End .row -->
+									</div>
+									<!-- End .form-choice -->
+								</div>
+								<!-- .End .tab-pane -->
 							</div>
+							<!-- End .tab-content -->
 						</div>
+						<!-- End .form-tab -->
 					</div>
+					<!-- End .form-box -->
 				</div>
-				<div class="d-md-none">
-					<div class="col-lg-9 px-0 mb-3">
-						<a href="<?= site_url('register'); ?>" class="btn btn-sm btn-block btn-b2bmap-secondary-close">Join Free Now</a>
-					</div>
-					<div class="col-lg-9 px-0 ">
-
-					</div>
-				</div>
+				<!-- End .modal-body -->
 			</div>
-
+			<!-- End .modal-content -->
 		</div>
-	</footer>
+		<!-- End .modal-dialog -->
+	</div>
+	<!-- End .modal -->
 
+	<!-- Pop-UP Start -->
+	<!-- Pop-UP End -->
+	<!-- Plugins JS File -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/bootstrap.bundle.min.js"></script>
+	<script src="assets/js/jquery.hoverIntent.min.js"></script>
+	<script src="assets/js/jquery.waypoints.min.js"></script>
+	<script src="assets/js/superfish.min.js"></script>
+	<script src="assets/js/owl.carousel.min.js"></script>
+	<script src="assets/js/bootstrap-input-spinner.js"></script>
+	<script src="assets/js/jquery.magnific-popup.min.js"></script>
+	<script src="assets/js/jquery.plugin.min.js"></script>
+	<script src="assets/js/jquery.countdown.min.js"></script>
+	<!-- Main JS File -->
+	<script src="assets/js/main.js"></script>
+	<script src="assets/js/demos/demo-14.js"></script>
 
-	<script src="<?= base_url(); ?>public/frontend/js/popper.min.js"></script>
-	<script src="<?= base_url(); ?>public/frontend/js/bootstrap.min.js"></script>
-	<script src="<?= base_url(); ?>public/frontend/js/main.js"></script>
-
-	<script src="<?= base_url(); ?>public/frontend/js/rocket-loader.min.js"></script>
-
-	<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vaafb692b2aea4879b33c060e79fe94621666317369993" integrity="sha512-0ahDYl866UMhKuYcW078ScMalXqtFJggm7TmlUtp0UlD4eQk0Ixfnm5ykXKvGJNFjLMoortdseTfsRT8oCfgGA==" data-cf-beacon='{"rayId":"79becfb2dd43bc21","token":"3cb77567f68e4cf2a0083bf4bf67f7e3","version":"2023.2.0","si":100}' crossorigin="anonymous"></script>
+	<script src="assets/js/jquery.elevateZoom.min.js"></script>
 </body>
+
+<!-- molla/index-14.html  22 Nov 2019 09:59:54 GMT -->
 
 </html>
