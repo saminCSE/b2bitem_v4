@@ -90,14 +90,14 @@
 					<i class="icon-bars"></i>
 				</button>
 
-				<a href="<?= site_url('website') ?>" class="logo">
+				<a href="https://b2bitem.com/" class="logo">
 					<img src="<?= base_url(); ?>assets/images/logo/B2B-2nd.png" alt="b2b Logo" width="150" height="75" />
 				</a>
 
 				<nav class="main-nav">
 					<ul class="menu sf-arrows">
 						<li>
-							<a href="<?= site_url('website') ?>" class="sf-ul">Home</a>
+							<a href="https://b2bitem.com/" class="sf-ul">Home</a>
 						</li>
 						<li>
 							<a href="<?= site_url('product') ?>" class="sf-ul">Products</a>

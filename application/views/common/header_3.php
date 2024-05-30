@@ -92,14 +92,14 @@
 					<i class="icon-bars"></i>
 				</button>
 
-				<a href="index.html" class="logo">
+				<a href="https://b2bitem.com/" class="logo">
 					<img src="<?= base_url(); ?>assets/images/logo/B2B-2nd.png" alt="b2b Logo" width="150" height="75" />
 				</a>
 
 				<nav class="main-nav">
 					<ul class="menu sf-arrows">
 						<li>
-							<a href="#" class="sf-ul">Home</a>
+							<a href="https://b2bitem.com/" class="sf-ul">Home</a>
 						</li>
 						<li>
 							<a href="<?= site_url('product') ?>" class="sf-ul">Products</a>
@@ -235,8 +235,8 @@
 										<!-- End .dropdown-cart-total -->
 
 										<div class="dropdown-cart-action">
-											<a href="cart.html" class="btn btn-primary">View Cart</a>
-											<a href="checkout.html" class="btn btn-outline-primary-2"><span>Checkout</span><i class="icon-long-arrow-right"></i></a>
+											<a href="#" class="btn btn-primary">View Cart</a>
+											<a href="#" class="btn btn-outline-primary-2"><span>Checkout</span><i class="icon-long-arrow-right"></i></a>
 										</div>
 										<!-- End .dropdown-cart-total -->
 									</div>

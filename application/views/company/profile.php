@@ -1,7 +1,7 @@
 <nav aria-label="breadcrumb" class="breadcrumb-nav border-0 mb-0">
 	<div class="container">
 		<ol class="breadcrumb">
-			<li class="breadcrumb-item"><a href="index.html">Home</a></li>
+			<li class="breadcrumb-item"><a href="#">Home</a></li>
 			<li class="breadcrumb-item"><a href="#">Pages</a></li>
 			<li class="breadcrumb-item active" aria-current="page">
 				Company Page
@@ -12,7 +12,7 @@
 </nav>
 <!-- End .breadcrumb-nav -->
 <div class="container">
-	<div class="page-header page-header-big text-center" style="background-image: url('assets/images/banners/banner-1.jpg')">
+	<div class="page-header page-header-big text-center" style="background-image: url('<?= base_url(); ?>assets/images/banners/banner-1.jpg')">
 		<h1 class="page-title">
 			<?= $info['company_name']; ?><span class="" style="color: #333;"><?= $info['country_name']; ?></span>
 		</h1>
