@@ -131,11 +131,11 @@ require_once(APPPATH . "views/common/header_2.php");
 										<li class="col-sm-6 col-lg-4 col-xl-3 mb-3 mb-lg-4">
 											<div class="product-card-th">
 												<div class="mb-1">
-													<a href="<?= site_url('product/view/' . $val['pslag']); ?>" class="text-ellipsis-clamp-2" title="Weiwei9zp-3.8t Agricultural Grass Straw Crusher Output 3t/h"> <?= $val['product_name']; ?> </a>
+													<a href="<?= site_url(('details/') . $val['pslag']); ?>" class="text-ellipsis-clamp-2" title="Weiwei9zp-3.8t Agricultural Grass Straw Crusher Output 3t/h"> <?= $val['product_name']; ?> </a>
 												</div>
 												<div class="product-card-th-grid">
 													<div class="product-card-th-grid-gallery position-relative">
-														<a href="<?= site_url('product/view/' . $val['pslag']); ?>" class="product-img-box">
+														<a href="<?= site_url(('details/') . $val['pslag']); ?>" class="product-img-box">
 															<img src="https://b2bitem.com/upload/product/<?= $val['product_image']; ?>" alt="<?= $v['product_image']; ?>" title="<?= $val['product_name']; ?>" class="product-img" decoding="async" loading="lazy">
 														</a>
 													</div>

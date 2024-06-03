@@ -284,7 +284,7 @@
 		?>
 			<div class="product product-7 text-center" style="width: 300.5px; height: 455.38px;">
 				<figure class="product-media">
-					<a href="<?= site_url('product/view/' . $v['pslag']); ?>">
+					<a href="<?= site_url(('details/') . $v['pslag']); ?>">
 
 						<?php if (!empty($v['product_image'])) { ?>
 							<img src="https://b2bitem.com/upload/product/<?= $v['product_image']; ?>" alt="<?= $v['product_name']; ?>" title="<?= $v['product_name']; ?>" class="product-image" style="height: 193.38px;" decoding="async" loading="lazy">
@@ -298,7 +298,7 @@
 					</div><!-- End .product-action-vertical -->
 
 					<div class="product-action">
-						<a href="<?= site_url('product/view/' . $v['pslag']); ?>#product-inquiry" class="btn-product btn-cart"><span>contact supplier</span></a>
+						<a href="<?= site_url(('details/') . $v['pslag']); ?>#product-inquiry" class="btn-product btn-cart"><span>contact supplier</span></a>
 					</div><!-- End .product-action -->
 				</figure><!-- End .product-media -->
 
@@ -306,7 +306,7 @@
 					<div class="product-cat">
 						<a href="<?= site_url('category/' . $v['link_prefix']); ?>" style="color: red;"><?= $v['category_name']; ?></a>
 					</div><!-- End .product-cat -->
-					<h3 class="product-title"><a href="<?= site_url('product/view/' . $v['pslag']); ?>" title="<?= $v['product_name']; ?>"><?= $v['product_name']; ?></a></h3><!-- End .product-title -->
+					<h3 class="product-title"><a href="<?= site_url(('details/') . $v['pslag']); ?>" title="<?= $v['product_name']; ?>"><?= $v['product_name']; ?></a></h3><!-- End .product-title -->
 					<div class="product-title country-info-container justify-content-center mb-1">
 					</div>
 					<div class="product-price">

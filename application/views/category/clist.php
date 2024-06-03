@@ -115,12 +115,12 @@ require_once(APPPATH . "views/common/header_2.php");
 											<a href="<?= site_url('subcategory/' . $v['sub_link_prefix']); ?>" class="d-block text-overflow-ellipsis text-14 mb-1"><?= $v['sub_category_name']; ?></a>
 											<div class="product-card-content">
 												<div>
-													<a href="<?= site_url('product/view/' . $v['pslag']); ?>" class="product-img-box product-img-4by3">
+													<a href="<?= site_url(('details/') . $v['pslag']); ?>" class="product-img-box product-img-4by3">
 														<img src="https://b2bitem.com/upload/product/<?= $v['product_image']; ?>" alt="<?= $v['product_name']; ?>" title="<?= $v['product_name']; ?>" class="product-img" decoding="async" loading="lazy">
 													</a>
 												</div>
 												<div>
-													<a href="<?= site_url('product/view/' . $v['pslag']); ?>" class="text-ellipsis-clamp-2 text-theme-to-link text-14 text-center" title="<?= $v['product_name']; ?>"> <?= $v['product_name']; ?> </a>
+													<a href="<?= site_url(('details/') . $v['pslag']); ?>" class="text-ellipsis-clamp-2 text-theme-to-link text-14 text-center" title="<?= $v['product_name']; ?>"> <?= $v['product_name']; ?> </a>
 												</div>
 											</div>
 										</div>
@@ -176,10 +176,10 @@ require_once(APPPATH . "views/common/header_2.php");
 														<div class="product-card border h-100">
 															<div class="product-header mb-">
 																<div class="mb-2" style="text-align: center;">
-																	<a href="<?= site_url('product/view/' . $v['pslag']); ?>" class="category-title"> <?= $v['product_name']; ?> </a>
+																	<a href="<?= site_url(('details/') . $v['pslag']); ?>" class="category-title"> <?= $v['product_name']; ?> </a>
 																</div>
 															</div>
-															<a href="<?= site_url('product/view/' . $v['pslag']); ?>" class="product-img-box box-ratio-4by3 mb-2">
+															<a href="<?= site_url(('details/') . $v['pslag']); ?>" class="product-img-box box-ratio-4by3 mb-2">
 																<img src="https://b2bitem.com/upload/product/<?= $v['product_image']; ?>" alt="Maxon Qualcomm QCN9024 WiFi6 Module - Advanced Wireless Connectivity" title="Maxon Qualcomm QCN9024 WiFi6 Module - Advanced Wireless Connectivity" class="product-img" decoding="async" loading="lazy">
 															</a>
 															<div class="mb-3">

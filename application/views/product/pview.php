@@ -521,7 +521,7 @@ require_once(APPPATH . "views/common/header_2.php");
 				foreach ($relatedproduct as $key => $val) { ?>
 					<div class="product product-7 text-center" style="width: 300.5px; height: 455.38px;">
 						<figure class="product-media">
-							<a href="<?= site_url('product/view/' . $val['pslag']); ?>">
+							<a href="<?= site_url(('details/') . $val['pslag']); ?>">
 
 								<?php if (!empty($val['product_image'])) { ?>
 									<img src="https://b2bitem.com/upload/product/<?= $val['product_image']; ?>" alt="<?= $val['product_name']; ?>" title="<?= $val['product_name']; ?>" class="product-image" style="height: 220.38px;" decoding="async" loading="lazy">
@@ -544,7 +544,7 @@ require_once(APPPATH . "views/common/header_2.php");
 								<a href="<?= site_url('category/index/' . $val['link_prefix']); ?>"><?= $val['category_name']; ?></a> /
 								<a href="#"><?= $val['sub_category_name']; ?></a>
 							</div><!-- End .product-cat -->
-							<h3 class="product-title"><a href="<?= site_url('product/view/' . $val['pslag']); ?>" title="<?= $val['product_name']; ?>"><?= $val['product_name']; ?></a></h3><!-- End .product-title -->
+							<h3 class="product-title"><a href="<?= site_url(('details/') . $val['pslag']); ?>" title="<?= $val['product_name']; ?>"><?= $val['product_name']; ?></a></h3><!-- End .product-title -->
 							<div class="product-title country-info-container justify-content-center mb-1">
 								<?php if (!empty($val['flag'])) { ?>
 									<span class="mr-1 mt-n05">

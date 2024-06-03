@@ -195,7 +195,7 @@ require_once(APPPATH . "views/common/header_1.php");
 									<div class="product text-center" style="height: 408.47px;">
 										<figure class="product-media">
 
-											<a href="<?= site_url('product/view/' . $v['pslag']); ?>">
+											<a href="<?= site_url(('details/') . $v['pslag']); ?>">
 												<img src="https://b2bitem.com/upload/product/<?= $v['product_image']; ?>" alt="<?= $v['product_image']; ?>" class="product-image" style="height: 193.38px;" />
 											</a>
 
@@ -207,7 +207,7 @@ require_once(APPPATH . "views/common/header_1.php");
 											<!-- End .product-action-vertical -->
 
 											<div class="product-action">
-												<a href="<?= site_url('product/view/' . $v['pslag']); ?>#product-inquiry" class="btn-product btn-cart" title="Add to cart"><span>contact supplier</span></a>
+												<a href="<?= site_url(('details/') . $v['pslag']); ?>#product-inquiry" class="btn-product btn-cart" title="Add to cart"><span>contact supplier</span></a>
 											</div>
 											<!-- End .product-action -->
 										</figure>
@@ -219,7 +219,7 @@ require_once(APPPATH . "views/common/header_1.php");
 											</div>
 											<!-- End .product-cat -->
 											<h3 class="product-title">
-												<a href="<?= site_url('product/view/' . $v['pslag']); ?>"><?= $v['product_name']; ?></a>
+												<a href="<?= site_url(('details/') . $v['pslag']); ?>"><?= $v['product_name']; ?></a>
 											</h3>
 											<!-- End .product-title -->
 											<div class="product-price">
@@ -504,7 +504,7 @@ require_once(APPPATH . "views/common/header_1.php");
 
 											<div class="product-body">
 												<h5 class="product-title">
-													<a href="<?= site_url('product/view/' . $v['pslag']); ?>" class="d-block text-roboto-evening text-14"><?= $v['product_name']; ?></a>
+													<a href="<?= site_url(('details/') . $v['pslag']); ?>" class="d-block text-roboto-evening text-14"><?= $v['product_name']; ?></a>
 													<div class="product-title country-info-container">
 														<?php if (!empty($v['flag'])) { ?>
 															<span class="mr-1 mt-n05">

@@ -201,7 +201,7 @@ require_once(APPPATH . "views/common/header_2.php");
 													<?php } ?>
 												</td>
 												<td style="max-width: 280px">
-													<a href="<?= site_url('product/view/' . $v['pslag']); ?>" class="d-block"> <?= $v['product_name']; ?></a>
+													<a href="<?= site_url(('details/') . $v['pslag']); ?>" class="d-block"> <?= $v['product_name']; ?></a>
 												</td>
 												<td class="country-info-container" style="min-width: 200px">
 													<?php if (!empty($v['flag'])) { ?>

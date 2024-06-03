@@ -58,6 +58,8 @@ $route['register'] = 'website/register';
 $route['b2bleads'] = 'website/b2bleads';
 $route['companies'] = 'website/companies';
 
+$route['product'] = 'product/index';
+
 //$route['company/details/(:any)'] = 'company/index/';
 $route['category/(:any)'] = 'category/index/$1';
 $route['subcategory/(:any)'] = 'category/sub/$1';
