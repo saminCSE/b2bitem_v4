@@ -1,5 +1,5 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 
 /*
 | -------------------------------------------------------------------------
@@ -61,7 +61,9 @@ $route['companies'] = 'website/companies';
 //$route['company/details/(:any)'] = 'company/index/';
 $route['category/(:any)'] = 'category/index/$1';
 $route['subcategory/(:any)'] = 'category/sub/$1';
-$route['company/(:any)'] = 'company/index/$1';
+$route['details/(:any)'] = 'product/view/$1';
+//$route['company/(:any)'] = 'company/index/$1';
+$route['(:any)'] = 'company/index/$1';
 $route['buysell/(:any)'] = 'website/buysell/$1';
 $route['cat_wise_buyer/(:any)'] = 'website/cat_wise_buyer/$1';
 

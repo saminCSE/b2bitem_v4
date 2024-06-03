@@ -46,7 +46,7 @@
 	<link rel="stylesheet" type="text/css" href="<?= base_url(); ?>public/frontend/css/icofont/icofont.min.css">
 	<link rel="stylesheet" type="text/css" href="<?= base_url(); ?>public/frontend/css/googlefonts.css">
 	<link rel="stylesheet" type="text/css" href="<?= base_url(); ?>public/frontend/css/font-awesome-4.7.0/css/font-awesome.min.css">
-	
+
 	<script src="<?= base_url(); ?>assets/js/jquery.min.js"></script>
 </head>
 
@@ -98,7 +98,7 @@
 								<a href="<?= site_url('b2bleads') ?>" class="sf-ul">B2B Leads</a>
 							</li>
 							<li>
-								<a href="<?= site_url('companies') ?>" class="sf-ul">Companies</a>
+								<a href="<?= site_url('/') ?>" class="sf-ul">Companies</a>
 							</li>
 						</ul>
 					</nav>
@@ -278,7 +278,7 @@
 	<!-- Pop-UP Start -->
 	<!-- Pop-UP End -->
 	<!-- Plugins JS File -->
-	
+
 	<script src="<?= base_url(); ?>assets/js/bootstrap.bundle.min.js"></script>
 	<script src="<?= base_url(); ?>assets/js/jquery.hoverIntent.min.js"></script>
 	<script src="<?= base_url(); ?>assets/js/jquery.waypoints.min.js"></script>

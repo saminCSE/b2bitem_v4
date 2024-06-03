@@ -224,7 +224,7 @@
 			<?php foreach ($com_cat as $val) { ?>
 				<div class="banner banner-cat">
 					<a href="#">
-						<img src="https://b2bitem.com/upload/category/<?= $val['cat_img']; ?>" alt="<?= $val['category_name']; ?>" title="<?= $val['category_name']; ?>" />
+						<img src="https://b2bitem.com/upload/category/<?= $val['cat_img']; ?>" alt="<?= $val['category_name']; ?>" title="<?= $val['category_name']; ?>" class="product-image" style="height: 200.38px;" decoding="async" loading="lazy" />
 					</a>
 
 					<div class="banner-content banner-content-static text-center">

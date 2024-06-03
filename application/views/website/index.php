@@ -228,7 +228,7 @@ require_once(APPPATH . "views/common/header_1.php");
 											</div>
 											<!-- End .product-price -->
 											<h3 class="product-title" style="color: #825ef7; font-size: 12px;">
-												<a href="<?= site_url('company/' . $v['com_slag']); ?>">
+												<a href="<?= site_url('/' . $v['com_slag']); ?>">
 													<?= $v['company_name']; ?>
 												</a>
 											</h3>
@@ -270,67 +270,18 @@ require_once(APPPATH . "views/common/header_1.php");
 				<div class="mb-3"></div>
 				<!-- End .mb-3 -->
 
-				<div class="row cat-banner-row electronics">
-					<div class="col-xl-3 col-xxl-4">
-						<div class="cat-banner row no-gutters">
-							<div class="cat-banner-list col-sm-6 d-xl-none d-xxl-flex" style="
-												background-image: url(assets/images/demos/demo-14/banners/banner-bg-1.jpg);
-											">
-								<div class="banner-list-content">
-									<h2><a href="#">Electronics</a></h2>
-
-									<ul>
-										<li><a href="#">Cell Phones</a></li>
-										<li><a href="#">Computers</a></li>
-										<li><a href="#">TV & Video</a></li>
-										<li><a href="#">Smart Home</a></li>
-										<li><a href="#">Audi</a></li>
-										<li><a href="#">Home Audio & Theater</a></li>
-										<li class="list-all-link">
-											<a href="#">See All Departments</a>
-										</li>
-									</ul>
-								</div>
-								<!-- End .banner-list-content -->
-							</div>
-							<!-- End .col-sm-6 -->
-
-							<div class="col-sm-6 col-xl-12 col-xxl-6">
-								<div class="banner banner-overlay">
-									<a href="#">
-										<img src="assets/images/demos/demo-14/banners/banner-5.jpg" alt="Banner img desc" />
-									</a>
-
-									<div class="banner-content">
-										<h4 class="banner-subtitle text-white">
-											<a href="#">Best Deals</a>
-										</h4>
-										<!-- End .banner-subtitle -->
-										<h3 class="banner-title text-white">
-											<a href="#">Canon EOS <br />Mega Sale <br /><span>Up To 20% Off</span></a>
-										</h3>
-										<!-- End .banner-title -->
-										<a href="#" class="banner-link">Shop Now <i class="icon-long-arrow-right"></i></a>
-									</div>
-									<!-- End .banner-content -->
-								</div>
-								<!-- End .banner -->
-							</div>
-							<!-- End .col-sm-6 -->
-						</div>
-						<!-- End .cat-banner -->
-					</div>
-					<!-- End .col-xl-3 -->
-
-					<div class="col-xl-9 col-xxl-8">
-						<div class="owl-carousel owl-full carousel-equal-height carousel-with-shadow" data-toggle="owl" data-owl-options='{
-							"nav": true, 
-							"dots": false,
+				<div class="container">
+					<hr class="mb-4" />
+					<h2 class="title text-center mb-3">Featured Categories<span style="font-weight: bold; color: #825ef7;"></span></h2>
+					<!-- End .title mb-2 -->
+					<div class="owl-carousel owl-simple" data-toggle="owl" data-owl-options='{
+							"nav": false, 
+							"dots": true,
 							"margin": 20,
 							"loop": false,
 							"responsive": {
 								"0": {
-									"items":2
+									"items":1
 								},
 								"480": {
 									"items":2
@@ -342,265 +293,38 @@ require_once(APPPATH . "views/common/header_1.php");
 									"items":4
 								},
 								"1200": {
-									"items":3
-								},
-								"1600": {
-									"items":4
+									"items":4,
+									"nav": true,
+									"dots": false
 								}
 							}
 						}'>
-							<div class="product text-center">
-								<figure class="product-media">
-									<span class="product-label label-top">Top</span>
-									<a href="#">
-										<img src="assets/images/demos/demo-14/products/product-6.jpg" alt="Product image" class="product-image" />
-									</a>
+						<?php foreach ($featured_cat_list as $val) { ?>
+							<div class="banner banner-cat">
+								<a href="#">
+									<img src="https://b2bitem.com/upload/category/<?= $val['cat_img']; ?>" alt="<?= $val['category_name']; ?>" title="<?= $val['category_name']; ?>" class="product-image" style="height: 193.38px;" decoding="async" loading="lazy" />
+								</a>
 
-									<div class="product-action-vertical">
-										<a href="#" class="btn-product-icon btn-wishlist" title="Add to wishlist"><span>add to wishlist</span></a>
-										<a href="popup/quickView.html" class="btn-product-icon btn-quickview" title="Quick view"><span>Quick view</span></a>
-										<a href="#" class="btn-product-icon btn-compare" title="Compare"><span>Compare</span></a>
-									</div>
-									<!-- End .product-action-vertical -->
-
-									<div class="product-action">
-										<a href="#" class="btn-product btn-cart" title="Add to cart"><span>contact supplier</span></a>
-									</div>
-									<!-- End .product-action -->
-								</figure>
-								<!-- End .product-media -->
-
-								<div class="product-body">
-									<div class="product-cat">
-										<a href="#">Laptops</a>
-									</div>
-									<!-- End .product-cat -->
-									<h3 class="product-title">
-										<a href="#">MacBook Pro 13" Display, i5</a>
+								<div class="banner-content banner-content-static text-center">
+									<h3 class="banner-title">
+										<a href="<?= site_url('category/index/' . $val['link_prefix']); ?>" class="category-title"><?= $val['category_name']; ?></a>
 									</h3>
-									<!-- End .product-title -->
-									<div class="product-price">$1,199.99</div>
-									<!-- End .product-price -->
-									<div class="ratings-container">
-										<div class="ratings">
-											<div class="ratings-val" style="width: 100%"></div>
-											<!-- End .ratings-val -->
-										</div>
-										<!-- End .ratings -->
-										<span class="ratings-text">( 4 Reviews )</span>
-									</div>
-									<!-- End .rating-container -->
+									<!-- End .banner-title -->
+									<!-- <h4 class="banner-subtitle">18 Products</h4> -->
+									<!-- End .banner-subtitle -->
+									<!-- <a href="#" class="banner-link">Shop Now</a> -->
 								</div>
-								<!-- End .product-body -->
+								<!-- End .banner-content -->
 							</div>
-							<!-- End .product -->
-
-							<div class="product text-center">
-								<figure class="product-media">
-									<a href="#">
-										<img src="assets/images/demos/demo-14/products/product-7.jpg" alt="Product image" class="product-image" />
-									</a>
-
-									<div class="product-action-vertical">
-										<a href="#" class="btn-product-icon btn-wishlist" title="Add to wishlist"><span>add to wishlist</span></a>
-										<a href="popup/quickView.html" class="btn-product-icon btn-quickview" title="Quick view"><span>Quick view</span></a>
-										<a href="#" class="btn-product-icon btn-compare" title="Compare"><span>Compare</span></a>
-									</div>
-									<!-- End .product-action-vertical -->
-
-									<div class="product-action">
-										<a href="#" class="btn-product btn-cart" title="Add to cart"><span>contact supplier</span></a>
-									</div>
-									<!-- End .product-action -->
-								</figure>
-								<!-- End .product-media -->
-
-								<div class="product-body">
-									<div class="product-cat">
-										<a href="#">Audio</a>
-									</div>
-									<!-- End .product-cat -->
-									<h3 class="product-title">
-										<a href="#">Bose - SoundLink Bluetooth Speaker</a>
-									</h3>
-									<!-- End .product-title -->
-									<div class="product-price">$79.99</div>
-									<!-- End .product-price -->
-									<div class="ratings-container">
-										<div class="ratings">
-											<div class="ratings-val" style="width: 60%"></div>
-											<!-- End .ratings-val -->
-										</div>
-										<!-- End .ratings -->
-										<span class="ratings-text">( 6 Reviews )</span>
-									</div>
-									<!-- End .rating-container -->
-								</div>
-								<!-- End .product-body -->
-							</div>
-							<!-- End .product -->
-
-							<div class="product text-center">
-								<figure class="product-media">
-									<span class="product-label label-new">New</span>
-									<a href="#">
-										<img src="assets/images/demos/demo-14/products/product-8.jpg" alt="Product image" class="product-image" />
-									</a>
-
-									<div class="product-action-vertical">
-										<a href="#" class="btn-product-icon btn-wishlist" title="Add to wishlist"><span>add to wishlist</span></a>
-										<a href="popup/quickView.html" class="btn-product-icon btn-quickview" title="Quick view"><span>Quick view</span></a>
-										<a href="#" class="btn-product-icon btn-compare" title="Compare"><span>Compare</span></a>
-									</div>
-									<!-- End .product-action-vertical -->
-
-									<div class="product-action">
-										<a href="#" class="btn-product btn-cart" title="Add to cart"><span>contact supplier</span></a>
-									</div>
-									<!-- End .product-action -->
-								</figure>
-								<!-- End .product-media -->
-
-								<div class="product-body">
-									<div class="product-cat">
-										<a href="#">Tablets</a>
-									</div>
-									<!-- End .product-cat -->
-									<h3 class="product-title">
-										<a href="#">Apple - 11 Inch iPad Pro <br />with Wi-Fi 256GB
-										</a>
-									</h3>
-									<!-- End .product-title -->
-									<div class="product-price">$899.99</div>
-									<!-- End .product-price -->
-									<div class="ratings-container">
-										<div class="ratings">
-											<div class="ratings-val" style="width: 60%"></div>
-											<!-- End .ratings-val -->
-										</div>
-										<!-- End .ratings -->
-										<span class="ratings-text">( 6 Reviews )</span>
-									</div>
-									<!-- End .rating-container -->
-
-									<div class="product-nav product-nav-dots">
-										<a href="#" style="background: #edd2c8"><span class="sr-only">Color name</span></a>
-										<a href="#" style="background: #eaeaec"><span class="sr-only">Color name</span></a>
-										<a href="#" class="active" style="background: #333333"><span class="sr-only">Color name</span></a>
-									</div>
-									<!-- End .product-nav -->
-								</div>
-								<!-- End .product-body -->
-							</div>
-							<!-- End .product -->
-
-							<div class="product text-center">
-								<figure class="product-media">
-									<span class="product-label label-top">Top</span>
-									<span class="product-label label-sale">Sale</span>
-									<a href="#">
-										<img src="assets/images/demos/demo-14/products/product-9.jpg" alt="Product image" class="product-image" />
-									</a>
-
-									<div class="product-action-vertical">
-										<a href="#" class="btn-product-icon btn-wishlist" title="Add to wishlist"><span>add to wishlist</span></a>
-										<a href="popup/quickView.html" class="btn-product-icon btn-quickview" title="Quick view"><span>Quick view</span></a>
-										<a href="#" class="btn-product-icon btn-compare" title="Compare"><span>Compare</span></a>
-									</div>
-									<!-- End .product-action-vertical -->
-
-									<div class="product-action">
-										<a href="#" class="btn-product btn-cart" title="Add to cart"><span>contact supplier</span></a>
-									</div>
-									<!-- End .product-action -->
-								</figure>
-								<!-- End .product-media -->
-
-								<div class="product-body">
-									<div class="product-cat">
-										<a href="#">Cell Phone</a>
-									</div>
-									<!-- End .product-cat -->
-									<h3 class="product-title">
-										<a href="#">Google - Pixel 3 XL 128GB</a>
-									</h3>
-									<!-- End .product-title -->
-									<div class="product-price">
-										<span class="new-price">$350.00</span>
-										<span class="old-price">Was $410.00</span>
-									</div>
-									<!-- End .product-price -->
-									<div class="ratings-container">
-										<div class="ratings">
-											<div class="ratings-val" style="width: 80%"></div>
-											<!-- End .ratings-val -->
-										</div>
-										<!-- End .ratings -->
-										<span class="ratings-text">( 10 Reviews )</span>
-									</div>
-									<!-- End .rating-container -->
-
-									<div class="product-nav product-nav-dots">
-										<a href="#" class="active" style="background: #edd2c8"><span class="sr-only">Color name</span></a>
-										<a href="#" style="background: #eaeaec"><span class="sr-only">Color name</span></a>
-									</div>
-									<!-- End .product-nav -->
-								</div>
-								<!-- End .product-body -->
-							</div>
-							<!-- End .product -->
-
-							<div class="product text-center">
-								<figure class="product-media">
-									<span class="product-label label-top">Top</span>
-									<a href="#">
-										<img src="assets/images/demos/demo-14/products/product-6.jpg" alt="Product image" class="product-image" />
-									</a>
-
-									<div class="product-action-vertical">
-										<a href="#" class="btn-product-icon btn-wishlist" title="Add to wishlist"><span>add to wishlist</span></a>
-										<a href="popup/quickView.html" class="btn-product-icon btn-quickview" title="Quick view"><span>Quick view</span></a>
-										<a href="#" class="btn-product-icon btn-compare" title="Compare"><span>Compare</span></a>
-									</div>
-									<!-- End .product-action-vertical -->
-
-									<div class="product-action">
-										<a href="#" class="btn-product btn-cart" title="Add to cart"><span>contact supplier</span></a>
-									</div>
-									<!-- End .product-action -->
-								</figure>
-								<!-- End .product-media -->
-
-								<div class="product-body">
-									<div class="product-cat">
-										<a href="#">Laptops</a>
-									</div>
-									<!-- End .product-cat -->
-									<h3 class="product-title">
-										<a href="#">MacBook Pro 13" Display, i5</a>
-									</h3>
-									<!-- End .product-title -->
-									<div class="product-price">$1,199.99</div>
-									<!-- End .product-price -->
-									<div class="ratings-container">
-										<div class="ratings">
-											<div class="ratings-val" style="width: 100%"></div>
-											<!-- End .ratings-val -->
-										</div>
-										<!-- End .ratings -->
-										<span class="ratings-text">( 4 Reviews )</span>
-									</div>
-									<!-- End .rating-container -->
-								</div>
-								<!-- End .product-body -->
-							</div>
-							<!-- End .product -->
-						</div>
-						<!-- End .owl-carousel -->
+							<!-- End .banner -->
+						<?php } ?>
 					</div>
-					<!-- End .col-xl-9 -->
+					<!-- End .banners-carousel owl-carousel owl-simple -->
+					<!-- End .banners-carousel owl-carousel owl-simple -->
+
+					<hr class="mb-4" />
 				</div>
-				<!-- End .row cat-banner-row -->
+				<!-- End .container -->
 
 				<div class="mb-3"></div>
 				<!-- End .mb-3 -->
@@ -680,7 +404,7 @@ require_once(APPPATH . "views/common/header_1.php");
 										foreach ($sellercompany as $key => $val) {
 										?>
 											<li class="mb-2">
-												<a href="<?= site_url('company/' . $val['slag']); ?>" class="d-block">
+												<a href="<?= site_url($val['slag']); ?>" class="d-block">
 													<?php if (!empty($val['flag'])) { ?>
 														<img src="https://b2bitem.com/upload/country/16_16/<?= $val['flag']; ?>" class="mr-1">
 													<?php } ?>

@@ -157,7 +157,7 @@ require_once(APPPATH . "views/common/header_2.php");
 										<?php foreach ($suppliers as $key => $v) { ?>
 											<tr>
 												<td>
-													<a href="<?= site_url('company/' . $v['slag']); ?>"> <?= $v['company_name']; ?> </a>
+													<a href="<?= site_url('/' . $v['slag']); ?>"> <?= $v['company_name']; ?> </a>
 												</td>
 												<td class="country-info-container" style="min-width: 200px">
 													<?php if (!empty($v['flag'])) { ?>

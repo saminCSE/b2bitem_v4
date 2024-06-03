@@ -149,7 +149,7 @@ require_once(APPPATH . "views/common/header_2.php");
 																		<img src="http://b2bitem.com/upload/country/16_16/<?= $val['flag']; ?>" alt="<?= $v['country_name']; ?>">
 																	</span>
 																<?php } ?>
-																<a href="<?= site_url('company/' . $val['slag']); ?>" class="text-overflow-ellipsis text-14"> <?= $val['company_name']; ?></a>
+																<a href="<?= site_url($val['slag']); ?>" class="text-overflow-ellipsis text-14"> <?= $val['company_name']; ?></a>
 															</div>
 														</div>
 													</div>

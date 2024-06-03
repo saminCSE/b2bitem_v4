@@ -253,7 +253,7 @@ require_once(APPPATH . "views/common/header_2.php");
 									<div>
 										<h4 class="custom-heading mb-3">Supplier Info :</h4>
 										<h4 class="custom-text-large custom-text-xl">
-											<a href="<?= site_url('company/' . $pinfo['slag']); ?>" class="custom-text-strong">
+											<a href="<?= site_url('/' . $pinfo['slag']); ?>" class="custom-text-strong">
 												<span><?= $pinfo['company_name']; ?></span>
 											</a>
 										</h4>
@@ -306,7 +306,7 @@ require_once(APPPATH . "views/common/header_2.php");
 		</div><!-- End .container-fluid -->
 
 		<div class="container" id="product-inquiry">
-			<h2 class="title text-center mb-4">Send Your Message to: <a href="<?= site_url('company/' . $pinfo['slag']); ?>" title="View Company Details" class="text-info">
+			<h2 class="title text-center mb-4">Send Your Message to: <a href="<?= site_url('/' . $pinfo['slag']); ?>" title="View Company Details" class="text-info">
 					<span class="text-strong"><?= $pinfo['company_name']; ?></span>
 				</a>
 			</h2>
@@ -524,7 +524,7 @@ require_once(APPPATH . "views/common/header_2.php");
 							<a href="<?= site_url('product/view/' . $val['pslag']); ?>">
 
 								<?php if (!empty($val['product_image'])) { ?>
-									<img src="https://b2bitem.com/upload/product/<?= $val['product_image']; ?>" alt="<?= $val['product_name']; ?>" title="<?= $val['product_name']; ?>" class="product-image" style="height: 193.38px;" decoding="async" loading="lazy">
+									<img src="https://b2bitem.com/upload/product/<?= $val['product_image']; ?>" alt="<?= $val['product_name']; ?>" title="<?= $val['product_name']; ?>" class="product-image" style="height: 220.38px;" decoding="async" loading="lazy">
 								<?php } ?>
 							</a>
 

@@ -280,10 +280,11 @@ class Websitemodel extends Frontend_Model
 	public function get_featured_cat_list()
 	{
 
-		$this->db->select('cat.*');
-		$this->db->from('category cat');
+		$this->db->select('cat.link_prefix, cat.category_name, cat.cat_img');
+		$this->db->join('category cat');
 		$this->db->where('cat.is_feature_cat', 1);
 		$this->db->where('cat.status', 'Active');
+		$this->db->order_by('cat.updated_at', 'DESC');
 		$this->db->limit(8);
 		$rs = $this->db->get();
 		return  $rs->result_array();

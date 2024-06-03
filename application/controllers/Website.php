@@ -123,6 +123,12 @@ class Website extends Frontend_Controller
 		$productlist2 = $this->websitemodel->get_product_top12_list();
 		$this->assign('productlist2', $productlist2);
 
+		$featured_cat_list = $this->websitemodel->get_featured_cat_list();
+		$this->assign('featured_cat_list', $featured_cat_list);
+		// echo '<pre>';
+		// print_r($featured_cat_list);
+		// exit;
+
 		$sellercompany = $this->websitemodel->get_new_seller_compnay_list();
 		$this->assign('sellercompany', $sellercompany);
 

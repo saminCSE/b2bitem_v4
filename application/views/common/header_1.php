@@ -313,13 +313,13 @@
 								<a href="https://b2bitem.com/" class="sf-ul">Home</a>
 							</li>
 							<li>
-								<a href="<?= site_url('product') ?>" class="sf-ul">Products</a>
+								<a href="<?= site_url('/product') ?>" class="sf-ul">Products</a>
 							</li>
 							<li>
 								<a href="<?= site_url('b2bleads') ?>" class="sf-ul">B2B Leads</a>
 							</li>
 							<li>
-								<a href="<?= site_url('companies') ?>" class="sf-ul">Companies</a>
+								<a href="<?= site_url('/') ?>" class="sf-ul">Companies</a>
 							</li>
 						</ul>
 						<!-- End .menu -->
