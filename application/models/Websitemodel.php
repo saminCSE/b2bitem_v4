@@ -74,6 +74,7 @@ class Websitemodel extends Frontend_Model
 		return $rs;
 	}
 
+
 	public function get_logged_user()
 	{
 		$userid = $this->session->userdata('admin_userid');
@@ -309,7 +310,7 @@ class Websitemodel extends Frontend_Model
 	public function get_company_product_list($id)
 	{
 
-		$this->db->select('c.company_name, p.pslag, p.product_image, p.min_order_qty, p.price, p.id, p.product_name, p.price, cat.category_name, cou.country_name, sub_cat.sub_category_name, pn.name as unit');
+		$this->db->select('c.company_name, p.pslag, p.product_image, p.min_order_qty, p.price, p.id, p.product_name, p.price, cat.category_name, cat.link_prefix, cou.country_name, sub_cat.sub_category_name, pn.name as unit');
 		$this->db->from('product p');
 		$this->db->join('company c', 'c.id=p.company_id', 'left');
 		$this->db->join('category cat', 'cat.id=p.category_id', 'left');
@@ -422,5 +423,13 @@ class Websitemodel extends Frontend_Model
 		$query = $this->db->get();
 		$rs = $query->result_array();
 		return $rs;
+	}
+
+	public function get_product_unit_list()
+	{
+		$this->db->select('*');
+		$this->db->from('product_unit');
+		$rs = $this->db->get();
+		return  $rs->result_array();
 	}
 }

@@ -724,4 +724,172 @@ class Website extends Frontend_Controller
 
 		$this->load->view('website/forgot_password');
 	}
+
+	public function buysell_req_from()
+	{
+
+		$post_data = $this->input->post();
+
+		//echo '<pre>';print_r($post_data);exit;
+
+		$countylist = $this->websitemodel->get_country_list();
+		$this->assign('countylist', $countylist);
+
+
+		$product_cat = $this->websitemodel->get_cat_list();
+		$this->assign('product_cat', $product_cat);
+
+		$product_unit = $this->websitemodel->get_product_unit_list();
+		$this->assign('product_unit', $product_unit);
+
+		$this->assign('req_data', $post_data);
+
+		$this->load->view('website/buysell_req_from');
+	}
+
+	public function savebuyselldata()
+	{
+
+
+		$data = $this->input->post();
+
+
+		if ($data['member_type'] == 'existing') {
+
+			$user = $this->websitemodel->check_login();
+
+			if (!empty($user)) {
+				$sdata['admin_username'] = $user['contact_person'];
+				$sdata['admin_email'] = $user['email'];
+				$sdata['admin_userid'] = $user['id'];
+				$sdata['admin_name'] = $user['contact_person'];
+				$sdata['admin_group_id'] = $user['company_user_type'];
+				$sdata['company_id'] = $user['id'];
+				$sdata['title'] = $user['company_user_type'];
+				$this->session->set_userdata($sdata);
+			} else {
+
+				$this->session->set_flashdata('error', $this->tpl->set_message('error', 'Email or password did not match.'));
+				redirect('website/buysell_req_from', 'refresh');
+			}
+		} else {
+
+			$token = bin2hex(openssl_random_pseudo_bytes(200));
+
+			$post_data['email'] = str_replace(" ", "", $data['registration_email']);
+
+			$check_com_email = $this->websitemodel->check_company_email($post_data['email']);
+
+			if ($check_com_email > 0) {
+
+				$this->session->set_flashdata('error', $this->tpl->set_message('error', 'Email Already exits. Please change your email address.'));
+				redirect('website/buysell_req_from', 'refresh');
+				exit;
+			}
+
+			$comslag = $this->removeSpecialCharacters($data['company_name']);
+
+			$slag = strtolower($comslag);
+
+			$slag = str_replace(" ", "-", $slag);
+
+			$post_data['activation_code'] = $token;
+			$post_data['reg_ip'] = $this->get_client_ip();
+			$post_data['text_password'] = $data['registration_password'];
+			$post_data['password'] = md5($data['registration_password']);
+			$post_data['join_date'] = date("Y-m-d");
+			$post_data['country_id'] = $data['country_id'];
+			$post_data['contact_person'] = $data['contact_person'];
+			$post_data['mobile'] = $data['mobile'];
+			$post_data['company_name'] = $data['company_name'];
+
+			$company_id = $this->websitemodel->insert('company', $post_data);
+
+			//$company_id = 27634;
+			if ($company_id) {
+
+				$slagdata['slag'] = $slag . '-' . $company_id;
+
+				$this->websitemodel->update('company', $company_id, $slagdata);
+
+				$this->send_verification_mail($company_id, $post_data);
+			}
+
+			$user['id'] = $company_id;
+		}
+
+
+		$validate = date('Y-m-d', strtotime($data['validity_date']));
+
+		$buydata['company_id'] = $user['id'];
+		$buydata['ad_title'] = $data['ad_title'];
+		$buydata['product_name'] = $data['product_name'];
+		$buydata['category_id'] = $data['cat_id'];
+		$buydata['req_details'] = $data['details'];
+		$buydata['qty'] = $data['quantity'];
+		$buydata['unit_id'] = $data['quantity_unit'];
+		$buydata['packaging_terms'] = $data['packing_terms'];
+		$buydata['shipping_terms'] = $data['shipping_terms'];
+		$buydata['validity_date'] = $validate;
+		$buydata['date'] = date('Y-m-d');
+		$buydata['category'] = 'buy';
+		$buydata['status'] = 'Pending';
+		$buydata['slag'] = uniqid();
+
+
+		if (trim($_FILES["productImg"]["name"]) != '') {
+
+			$files = $_FILES;
+			$_FILES['image_name']['name'] = $files['productImg']['name'];
+			$_FILES['image_name']['type'] = $files['productImg']['type'];
+			$_FILES['image_name']['tmp_name'] = $files['productImg']['tmp_name'];
+			$_FILES['image_name']['error'] = $files['productImg']['error'];
+			$_FILES['image_name']['size'] = $files['productImg']['size'];
+			$new_name = rand(100000, 999999) . '_' . rand(100000, 999999) . $_FILES['image_name']['name'];
+			$new_name = preg_replace('/[^a-zA-Z0-9_ %\[\]\.\.]/s', '', $new_name);
+			$new_name = preg_replace('/\s+/', '_', $new_name);
+			$field_name = "productImg";
+
+			$this->upload_product($field_name, $new_name);
+
+			$productImg = $new_name;
+
+			$buydata['product_img'] = $productImg;
+		}
+
+
+		$this->websitemodel->insert('buysale', $buydata);
+
+		redirect('website/buysell_req_from_success', 'refresh');
+		exit;
+	}
+
+	public function buysell_req_from_success()
+	{
+
+
+		$this->load->view('website/buysell_req_from_success');
+	}
+
+
+	function upload_product($field_name, $image_name)
+	{
+		$upconfig['upload_path'] = "../upload/buysell";
+		$file_info = pathinfo($image_name);
+		$upconfig['file_name'] = basename($image_name, '.' . $file_info['extension']);
+		$upconfig['allowed_types'] = 'gif|jpg|png|jpeg';
+		/*$upconfig['max_size'] = '300';
+        $upconfig['max_width'] = '300';
+        $upconfig['max_height'] = '320';*/
+		$upconfig['overwrite'] = FALSE;
+		$this->load->library('upload');
+		$this->upload->initialize($upconfig);
+
+		if (!$this->upload->do_upload($field_name)) {
+			return false;
+		} else {
+			$updata = $this->upload->data();
+			return true;
+		}
+	}
 }

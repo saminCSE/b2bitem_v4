@@ -207,7 +207,7 @@ require_once(APPPATH . "views/common/header_1.php");
 											<!-- End .product-action-vertical -->
 
 											<div class="product-action">
-												<a href="#" class="btn-product btn-cart" title="Add to cart"><span>contact seller</span></a>
+												<a href="<?= site_url('product/view/' . $v['pslag']); ?>#product-inquiry" class="btn-product btn-cart" title="Add to cart"><span>contact supplier</span></a>
 											</div>
 											<!-- End .product-action -->
 										</figure>
@@ -364,7 +364,7 @@ require_once(APPPATH . "views/common/header_1.php");
 									<!-- End .product-action-vertical -->
 
 									<div class="product-action">
-										<a href="#" class="btn-product btn-cart" title="Add to cart"><span>contact seller</span></a>
+										<a href="#" class="btn-product btn-cart" title="Add to cart"><span>contact supplier</span></a>
 									</div>
 									<!-- End .product-action -->
 								</figure>
@@ -409,7 +409,7 @@ require_once(APPPATH . "views/common/header_1.php");
 									<!-- End .product-action-vertical -->
 
 									<div class="product-action">
-										<a href="#" class="btn-product btn-cart" title="Add to cart"><span>contact seller</span></a>
+										<a href="#" class="btn-product btn-cart" title="Add to cart"><span>contact supplier</span></a>
 									</div>
 									<!-- End .product-action -->
 								</figure>
@@ -455,7 +455,7 @@ require_once(APPPATH . "views/common/header_1.php");
 									<!-- End .product-action-vertical -->
 
 									<div class="product-action">
-										<a href="#" class="btn-product btn-cart" title="Add to cart"><span>contact seller</span></a>
+										<a href="#" class="btn-product btn-cart" title="Add to cart"><span>contact supplier</span></a>
 									</div>
 									<!-- End .product-action -->
 								</figure>
@@ -510,7 +510,7 @@ require_once(APPPATH . "views/common/header_1.php");
 									<!-- End .product-action-vertical -->
 
 									<div class="product-action">
-										<a href="#" class="btn-product btn-cart" title="Add to cart"><span>contact seller</span></a>
+										<a href="#" class="btn-product btn-cart" title="Add to cart"><span>contact supplier</span></a>
 									</div>
 									<!-- End .product-action -->
 								</figure>
@@ -565,7 +565,7 @@ require_once(APPPATH . "views/common/header_1.php");
 									<!-- End .product-action-vertical -->
 
 									<div class="product-action">
-										<a href="#" class="btn-product btn-cart" title="Add to cart"><span>contact seller</span></a>
+										<a href="#" class="btn-product btn-cart" title="Add to cart"><span>contact supplier</span></a>
 									</div>
 									<!-- End .product-action -->
 								</figure>
@@ -828,7 +828,7 @@ require_once(APPPATH . "views/common/header_1.php");
 												<!-- End .product-action-vertical -->
 
 												<div class="product-action">
-													<a href="#" class="btn-product btn-cart" title="Add to cart"><span>contact seller</span></a>
+													<a href="#" class="btn-product btn-cart" title="Add to cart"><span>contact supplier</span></a>
 												</div>
 												<!-- End .product-action -->
 											</figure>
@@ -921,11 +921,11 @@ require_once(APPPATH . "views/common/header_1.php");
 							<!-- <h2 class="title mb-1">Got Any Questions?</h2>
 							<p class="mb-2">Use the form below to get in touch with the sales team</p> -->
 
-							<form action="#" class="contact-form mb-3">
+							<form action="<?= site_url('website/buysell_req_from'); ?>" class="contact-form mb-3" method="post">
 								<div class="row">
 									<div class="col-sm-12">
 										<label for="cname" class="sr-only">Item Name</label>
-										<input type="text" class="form-control" id="cname" placeholder="Enter product name ..." required>
+										<input type="text" name="p_name" class="form-control" id="cname" placeholder="Enter product name ..." required>
 									</div><!-- End .col-sm-6 -->
 								</div><!-- End .row -->
 								<div class="form-group">
@@ -941,7 +941,7 @@ require_once(APPPATH . "views/common/header_1.php");
 									</div>
 								</div>
 								<label for="cmessage" class="sr-only">Message</label>
-								<textarea class="form-control" cols="30" rows="4" id="cmessage" required placeholder="Describe your buying requirement including specifications, sizes etc"></textarea>
+								<textarea name="p_des" class="form-control" cols="30" rows="4" id="cmessage" required placeholder="Describe your buying requirement including specifications, sizes etc"></textarea>
 
 								<button type="submit" class="btn btn-outline-primary-2 btn-minwidth-sm" style="color: #333333;">
 									<span>Post Buy Leads</span>

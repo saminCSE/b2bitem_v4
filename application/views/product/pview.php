@@ -68,9 +68,9 @@ require_once(APPPATH . "views/common/header_2.php");
 										<!-- <span class="old-price">$110.00</span> -->
 									</div><!-- End .product-price -->
 
-									<div class="product-content">
+									<!-- <div class="product-content">
 										<p><?= $pinfo['product_description']; ?></p>
-									</div><!-- End .product-content -->
+									</div> -->
 
 
 									<div class="details-filter-row details-row-size">
@@ -90,7 +90,7 @@ require_once(APPPATH . "views/common/header_2.php");
 									</div><!-- End .details-filter-row -->
 
 									<!-- <div class="product-details-action">
-										<a href="#" class="btn-product "><span>contact seller</span></a>
+										<a href="#" class="btn-product "><span>contact supplier</span></a>
 									</div> -->
 									<!-- End .product-details-action -->
 
@@ -119,12 +119,12 @@ require_once(APPPATH . "views/common/header_2.php");
 										<div class="card card-box card-sm">
 											<div class="card-header" id="product-usages">
 												<h2 class="card-title">
-													<a class="collapsed" role="button" data-toggle="collapse" href="#product-accordion-info" aria-expanded="false" aria-controls="product-accordion-info">
+													<a role="button" data-toggle="collapse" href="#product-accordion-info" aria-expanded="false" aria-controls="product-accordion-info">
 														Product Usages
 													</a>
 												</h2>
 											</div><!-- End .card-header -->
-											<div id="product-accordion-info" class="collapse" aria-labelledby="product-usages" data-parent="#product-accordion">
+											<div id="product-accordion-info" class="collapse show" aria-labelledby="product-usages" data-parent="#product-accordion">
 												<div class="card-body">
 													<div class="product-desc-content">
 														<h3>Product Usages - Details</h3>
@@ -155,51 +155,16 @@ require_once(APPPATH . "views/common/header_2.php");
 										<div class="card card-box card-sm">
 											<div class="card-header" id="product-desc-heading">
 												<h2 class="card-title">
-													<a role="button" data-toggle="collapse" href="#product-contact-desc" aria-expanded="false" aria-controls="product-contact-desc">
-														Contact
+													<a class="collapsed" role="button" data-toggle="collapse" href="#product-contact-desc" aria-expanded="false" aria-controls="product-contact-desc">
+														Product Description
 													</a>
 												</h2>
 											</div><!-- End .card-header -->
-											<div id="product-contact-desc" class="collapse show" aria-labelledby="product-desc-heading" data-parent="#product-accordion">
+											<div id="product-contact-desc" class="collapse" aria-labelledby="product-desc-heading" data-parent="#product-accordion">
 												<div class="card-body">
 													<div class="product-desc-content">
 														<div class="col-lg-12">
-															<h2 class="title mb-1">Got Any Questions?</h2><!-- End .title mb-2 -->
-															<p class="mb-2">Use the form below to get in touch with the sales team</p>
-
-															<form action="#" class="contact-form mb-3">
-																<div class="row">
-																	<div class="col-sm-6">
-																		<label for="cname" class="sr-only">Name</label>
-																		<input type="text" class="form-control" id="cname" placeholder="Name *" required>
-																	</div><!-- End .col-sm-6 -->
-
-																	<div class="col-sm-6">
-																		<label for="cemail" class="sr-only">Email</label>
-																		<input type="email" class="form-control" id="cemail" placeholder="Email *" required>
-																	</div><!-- End .col-sm-6 -->
-																</div><!-- End .row -->
-
-																<div class="row">
-																	<div class="col-sm-6">
-																		<label for="cphone" class="sr-only">Phone</label>
-																		<input type="tel" class="form-control" id="cphone" placeholder="Phone">
-																	</div><!-- End .col-sm-6 -->
-
-																	<div class="col-sm-6">
-																		<label for="csubject" class="sr-only">Subject</label>
-																		<input type="text" class="form-control" id="csubject" placeholder="Subject">
-																	</div><!-- End .col-sm-6 -->
-																</div><!-- End .row -->
-
-																<label for="cmessage" class="sr-only">Message</label>
-																<textarea class="form-control" cols="30" rows="4" id="cmessage" required placeholder="Message *"></textarea>
-
-																<button type="submit" class="btn btn-outline-primary-2 btn-minwidth-sm">
-																	<span>SUBMIT</span>
-																	<i class="icon-long-arrow-right"></i>
-																</button>
-															</form><!-- End .contact-form -->
+															<p><?= $pinfo['product_description']; ?></p>
 														</div><!-- End .col-lg-12 -->
 													</div><!-- End .product-desc-content -->
 												</div><!-- End .card-body -->
@@ -288,7 +253,7 @@ require_once(APPPATH . "views/common/header_2.php");
 									<div>
 										<h4 class="custom-heading mb-3">Supplier Info :</h4>
 										<h4 class="custom-text-large custom-text-xl">
-											<a href="#" class="custom-text-strong">
+											<a href="<?= site_url('company/' . $pinfo['slag']); ?>" class="custom-text-strong">
 												<span><?= $pinfo['company_name']; ?></span>
 											</a>
 										</h4>
@@ -340,6 +305,189 @@ require_once(APPPATH . "views/common/header_2.php");
 
 		</div><!-- End .container-fluid -->
 
+		<div class="container" id="product-inquiry">
+			<h2 class="title text-center mb-4">Send Your Message to: <a href="<?= site_url('company/' . $pinfo['slag']); ?>" title="View Company Details" class="text-info">
+					<span class="text-strong"><?= $pinfo['company_name']; ?></span>
+				</a>
+			</h2>
+			<div class="row" style="float: left;width: 100%;">
+				<div class="col-md-12">
+					<div class="card rounded-0 mb-4 specification">
+						<div class="card-body bg-white">
+							<div class="biz-form px-lg-5 py-lg-4">
+								<form action="#" method="post" enctype="multipart/form-data">
+									<input type="hidden" name="_token" value="6IAc9fKColymscQ52UydixIdL4QWaJcefDOvbl0X">
+									<input type="hidden" name="inquiry_to" value="seller">
+									<input type="hidden" name="item_id" value="34279">
+									<input type="hidden" name="item_type" value="product">
+									<div class="biz-form">
+										<div class="row mx-lg-n4 justify-content-lg-center">
+											<div class="col-lg-3 px-lg-4">
+												<div class="form-group">
+													<?php if (!empty($pinfo['product_image'])) { ?>
+														<img src="https://b2bitem.com/upload/product/<?= $pinfo['product_image']; ?>" alt="<?= $pinfo['product_name']; ?>" title="<?= $pinfo['product_name']; ?>" class="img-thumbnail mx-auto d-block" decoding="async" loading="lazy">
+													<?php } ?>
+												</div>
+											</div>
+											<div class="col-lg-7 px-xl-5">
+												<div class="form-group">
+													<div>
+														<input type="text" name="subject" value placeholder="<?= $pinfo['product_name']; ?>" class="form-control deep-placeholder numeric-validation" data-check-subject="true">
+
+													</div>
+												</div>
+												<div class="form-group">
+													<div>
+														<textarea rows="5" name="mail_body" class="form-control deep-placeholder" placeholder="Enter your inquiry details such as product name, color, size, quantity, pricing etc"></textarea>
+
+													</div>
+												</div>
+												<div class="mb-3">
+													<div class="py-2 mb-2">
+														<div class="custom-control custom-radio custom-control-inline my-1">
+															<input type="radio" class="custom-control-input user-existence-checker" id="existingUserToggler" name="member_type" value="existing">
+															<label class="custom-control-label text-strong text-muted" for="existingUserToggler">Existing Member</label>
+														</div>
+														<div class="custom-control custom-radio custom-control-inline my-1 mr-0">
+															<input type="radio" class="custom-control-input user-existence-checker" id="newUserToggler" name="member_type" value="new">
+															<label class="custom-control-label text-strong text-muted" for="newUserToggler">New Member</label>
+														</div>
+														<div>
+															<!--span class="error">
+                                                    <i class="fa fa-warning"></i> This field is required </span-->
+														</div>
+													</div>
+													<div class="user-existence-togglable" id="existingUser">
+														<div class="user-form mb-4">
+															<div class="form-group row">
+																<label class="col-lg-3">Email Address <span class="text-danger">*</span>
+																</label>
+																<div class="col-lg-9">
+																	<input type="email" name="email" value class="form-control" placeholder="Email Address">
+																</div>
+															</div>
+															<div class="form-group row">
+																<label class="col-lg-3">Password <span class="text-danger">*</span>
+																</label>
+																<div class="col-lg-9">
+																	<input type="password" name="password" class="form-control" placeholder="Password" autocomplete="new-password">
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="user-existence-togglable" id="newUser">
+														<div class="mb-4">
+															<h6> Account Information </h6>
+														</div>
+														<div class="form-group row">
+															<label class="col-lg-3 d-lg-down-none">I am <span class="text-danger">*</span>
+															</label>
+															<div class="col-lg-9">
+																<div class="auth-input-group">
+																	<div class="form-check-inline">
+																		<label class="form-check-label">
+																			<input type="radio" name="business_type" value="2" class="form-check-input "> Seller </label>
+																	</div>
+																	<div class="form-check-inline">
+																		<label class="form-check-label">
+																			<input type="radio" name="business_type" value="1" class="form-check-input"> Buyer </label>
+																	</div>
+																</div>
+															</div>
+														</div>
+														<div class="form-group row">
+															<label class="col-lg-3 d-lg-down-none" for="company">Company Name <span class="text-danger">*</span>
+															</label>
+															<div class="col-lg-9">
+																<input type="text" name="company" id="company" value class="form-control" placeholder="Company Name">
+															</div>
+														</div>
+														<div class="form-group row">
+															<label class="col-lg-3 d-lg-down-none" for="country">Country <span class="text-danger">*</span>
+															</label>
+															<div class="col-lg-9">
+																<select name="country_id" id="country" class="form-control">
+																	<option value>-- Select Country --</option>
+																	<?php foreach ($countylist as $val) { ?>
+																		<option value="<?= $val['id']; ?>"><?= $val['country_name']; ?></option>
+																	<?php } ?>
+																</select>
+															</div>
+														</div>
+														<div class="form-group row">
+															<label class="col-lg-3 d-lg-down-none">Contact Person <span class="text-danger">*</span>
+															</label>
+															<div class="col-lg-9">
+																<div class="d-flex">
+																	<div class="mr-3">
+																		<select name="contact_person_name_title" id="contact_person_name_title" class="form-control mw-100px">
+																			<option value="Mr." selected> Mr. </option>
+																			<option value="Ms."> Ms. </option>
+																		</select>
+																	</div>
+																	<div class="w-100">
+																		<input type="text" name="name" value class="form-control" placeholder="Your Name">
+																	</div>
+																</div>
+															</div>
+														</div>
+														<div class="form-group row">
+															<label class="col-lg-3 d-lg-down-none">Email <span class="text-danger">*</span>
+															</label>
+															<div class="col-lg-9">
+																<input type="email" name="registration_email" value class="form-control" placeholder="Email Address">
+															</div>
+														</div>
+														<div class="form-group row">
+															<label class="col-lg-3 d-lg-down-none">Phone <span class="text-danger">*</span>
+															</label>
+															<div class="col-lg-9">
+																<div class="d-flex">
+																	<div class="mr-3">
+																		<input type="text" name="phone_code" value id="phone_code" class="form-control mw-50px" readonly>
+																	</div>
+																	<div class="w-100">
+																		<input type="text" name="phone" id="phone" value class="form-control prevent-first-zero numeric-validation" aria-errormessage="Phone Number" placeholder="Phone Number">
+																		<span class="phone-error"></span>
+																	</div>
+																</div>
+															</div>
+														</div>
+														<div class="form-group row">
+															<label class="col-lg-3 d-lg-down-none" for="registration_password">Password <span class="text-danger">*</span>
+															</label>
+															<div class="col-lg-9">
+																<input type="password" name="registration_password" id="registration_password" value class="form-control" placeholder="Password" autocomplete="new-password">
+															</div>
+														</div>
+														<div class="form-group row">
+															<div class="col-lg-9 offset-lg-3">
+																<div class="custom-control custom-checkbox">
+																	<input type="checkbox" data-toggle="submit" class="custom-control-input" id="agreeBusinessListingTerms" name="agreeBusinessListingTerms" checked required>
+																	<label class="custom-control-label text-muted text-15" for="agreeBusinessListingTerms"> I Agree to Business Listing <a href="https://b2bitem.com/terms" target="_blank" class="text-business-tertiary">Terms & General Agreement</a>
+																	</label>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="text-center">
+													<button type="submit" class="btn btn-info px-5 btn-md-down-small">
+														<i class="fa fa-envelope-o mr-2"></i> Send Message </button>
+												</div>
+											</div>
+										</div>
+									</div>
+								</form>
+							</div>
+						</div>
+
+
+					</div>
+				</div>
+			</div>
+		</div>
+
 		<div class="container">
 			<h2 class="title text-center mb-4">Related Products</h2><!-- End .title text-center -->
 			<div class="owl-carousel owl-simple carousel-equal-height carousel-with-shadow" data-toggle="owl" data-owl-options='{
@@ -387,7 +535,7 @@ require_once(APPPATH . "views/common/header_2.php");
 							</div><!-- End .product-action-vertical -->
 
 							<div class="product-action">
-								<a href="#" class="btn-product btn-cart"><span>contact seller</span></a>
+								<a href="#" class="btn-product btn-cart"><span>contact supplier</span></a>
 							</div><!-- End .product-action -->
 						</figure><!-- End .product-media -->
 
@@ -423,3 +571,133 @@ require_once(APPPATH . "views/common/header_2.php");
 <?php
 require_once(APPPATH . "views/common/footer_1.php");
 ?>
+
+<script src="<?= base_url(); ?>assets/js/fileinput.min.js"></script>
+<script src="<?= base_url(); ?>assets/js/multiple-file.js"></script>
+
+<script>
+	if ($('input[data-has-img="true"]').is(':checked')) {
+		$('.product-has-img').show();
+	} else {
+		$('.product-has-img').hide();
+	}
+	$('input[type="radio"]').on('change', function() {
+		let checkHasImg = $(this).attr('data-has-img');
+		if ($('input[data-has-img="true"]').is(':checked')) {
+			$('.product-has-img').show();
+		} else {
+			$('.product-has-img').hide();
+		}
+	});
+	$("#fileUpload").fileinput({
+		theme: "fa",
+		uploadUrl: "/file-upload-batch/2",
+		deleteUrl: "/images/file-delete",
+		hideThumbnailContent: false,
+		maxFileSize: 1000,
+		maxFileCount: 5,
+		browseClass: "btn file-input-btn",
+		showCaption: false,
+		showRemove: false,
+		showUpload: false,
+		overwriteInitial: false,
+		initialPreview: [],
+	});
+	$(document).on('click', '.file-preview-thumbnails', function() {
+		$('#fileUpload').trigger('click');
+	});
+	$('.file-drop-zone-title').html('Upload File');
+	$(document).on('click', '.file-drop-zone-title', function() {
+		$('#fileUpload').trigger('click');
+	});
+	$(document).on('click', '.file-preview-frame', function() {
+		$(this).stopPropagation();
+	});
+	$('.add-more-specification').on('click', function(e) {
+		e.preventDefault();
+		let target = $('#moreSpecification');
+		$(target).append(`
+            <div class="specification-item form-item-removable removable-item mb-4">
+                <div class="row">
+                    <div class="col-6">
+                        <input type="text" name="attribute[]" class="form-control" placeholder="Attribute E.G: Color">
+                    </div>
+                    <div class="col-6">
+                        <input type="text" name="value[]" class="form-control" placeholder="Attribute E.G: Red">
+                    </div>
+                </div>
+                <a href="#" class="form-item-remover remove-item"><span class="text">&times</span></a>
+            </div>
+            `)
+	});
+	if ($('#newUserToggler').is(':checked')) {
+		$('#existingUser').removeClass('show');
+		$('#newUser').addClass('show');
+	} else if ($('#existingUserToggler').is(':checked')) {
+		$('#newUser').removeClass('show');
+		$('#existingUser').addClass('show');
+	}
+	$('input[type="radio"].user-existence-checker').on('click', function() {
+		if ($('#newUserToggler').is(':checked')) {
+			$('#existingUser').removeClass('show');
+			$('#newUser').addClass('show');
+		} else if ($('#existingUserToggler').is(':checked')) {
+			$('#newUser').removeClass('show');
+			$('#existingUser').addClass('show');
+		}
+	});
+	var allowImageExtension = [".jpg", ".jpeg", ".bmp", ".gif", ".png", ".webp", ".svg"];
+	let duplicateCheckArray = [];
+	$(document).ready(function() {
+		if (window.File && window.FileList && window.FileReader) {
+			$(".multiple-file-upload").on("change", function(e) {
+				var uploadItemLength = $(this).parents('.uploaded-field').find('.upload-item').length;
+				let thisAfterList = $(this).parents('.uploaded-field').find('.upload-file-list');
+				let files = this.files;
+				for (let i = 0; i < files.length; i++) {
+					let getExtension = '.' + files[i].name.split('.').pop();
+					let setExtension = getExtension.toLowerCase();
+					if (allowImageExtension.indexOf(setExtension) > -1) {
+						if (duplicateCheckArray.indexOf(files[i].name) > -1) {
+							alert(files[i].name + ' already selected.');
+						} else {
+							if (files[i].size <= 2000000) {
+								let dt = new DataTransfer();
+								let f = files[i];
+								console.log(f);
+								dt.items.add(new File([f.slice(0, f.size, f.type)], f.name));
+								$(this).parents('.uploaded-field').find('.upload-file-list').append(`
+                                    <li class="upload-item box-70 mb-3 mr-3 border rounded">
+                                        <img class="uploaded-img" src="" alt='File'/>
+                                        <input type="file" name="images[]" class="d-none attach-file-value" id="attachFile` + i + `">
+                                        <button type='button' class="box-20 rounded-circle remove-uploaded"><span class='text'>&times</span></button>
+                                    </li>
+                                `);
+								let fileReader = new FileReader();
+								fileReader.onload = (function(j) {
+									let file = j.target;
+									$("#attachFile" + i).after("<img class=\"uploaded-img\" src=\"" + j.target.result + "\" alt='File'/>").removeAttr('id');
+									$("#attachFile" + i).removeAttr('id')
+								});
+								fileReader.readAsDataURL(f);
+								var back = document.getElementById("attachFile" + i);
+								back.files = dt.files;
+							} else {
+								alert('Warning! Large file not acceptable and will automatically remove.\n\nEvery file size maximum 2MB!');
+							}
+						}
+						duplicateCheckArray.push(files[i].name);
+					} else {
+						alert(setExtension + ' ' + ' File type not allow');
+					}
+				}
+				$(this).val('');
+			});
+		} else {
+			alert("Your browser doesn't support to File API")
+		}
+	});
+	$(document).on('click', '.remove-uploaded', function() {
+		$(this).parent(".upload-item").remove();
+	});
+</script>
