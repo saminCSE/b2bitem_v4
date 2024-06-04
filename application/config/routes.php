@@ -59,6 +59,8 @@ $route['b2bleads'] = 'website/b2bleads';
 $route['companies'] = 'website/companies';
 
 $route['product'] = 'product/index';
+$route['buyer'] = 'buyer/index';
+$route['seller'] = 'seller/index';
 
 //$route['company/details/(:any)'] = 'company/index/';
 $route['category/(:any)'] = 'category/index/$1';

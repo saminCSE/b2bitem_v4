@@ -43,19 +43,19 @@
 				<div class="col-sm-12 col-lg-4">
 					<div class="widget widget-about">
 						<img src="<?= base_url(); ?>assets/images/logo/B2B-2nd.png" class="footer-logo" alt="Footer Logo" width="150" height="65" />
-						<p>
+						<!-- <p>
 							Praesent dapibus, neque id cursus ucibus, tortor neque
 							egestas augue, eu vulputate magna eros eu erat. Aliquam erat
 							volutpat. Nam dui mi, tincidunt quis, accumsan porttitor,
 							facilisis luctus, metus.
-						</p>
+						</p> -->
 
 						<div class="widget-about-info">
 							<div class="row">
-								<div class="col-sm-6 col-md-4">
+								<!-- <div class="col-sm-6 col-md-4">
 									<span class="widget-about-title">Got Question? Call us 24/7</span>
 									<a href="tel:123456789">+880XXXXXXXXXX</a>
-								</div>
+								</div> -->
 								<!-- End .col-sm-6 -->
 								<div class="col-sm-6 col-md-8">
 									<span class="widget-about-title">Payment Method</span>
@@ -134,9 +134,9 @@
 						<h4 class="widget-title">Sign Up to Newsletter</h4>
 						<!-- End .widget-title -->
 
-						<p>
+						<!-- <p>
 							Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan.
-						</p>
+						</p> -->
 
 						<form action="#">
 							<div class="input-group">

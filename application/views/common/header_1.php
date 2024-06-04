@@ -67,7 +67,7 @@
 														</div>
 													</li>
 													<li class="list-group-item px-0 py-2">
-														<a href="#" class="dropdown-item px-0 d-flex text-17">
+														<a href="http://localhost/b2bitem_v4/index.php?/logout" class="dropdown-item px-0 d-flex text-17">
 															<span class="mr-2">
 																<i class="fa fa-sign-out text-14 link-icon"></i>
 															</span> Logout </a>
@@ -153,78 +153,6 @@
 									<span class="wishlist-count">3</span>
 									<span class="wishlist-txt">Wishlist</span>
 								</a>
-
-								<div class="dropdown cart-dropdown">
-									<a href="#" class="dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-display="static">
-										<i class="icon-shopping-cart"></i>
-										<span class="cart-count">2</span>
-										<span class="cart-txt">Cart</span>
-									</a>
-
-									<div class="dropdown-menu dropdown-menu-right">
-										<div class="dropdown-cart-products">
-											<div class="product">
-												<div class="product-cart-details">
-													<h4 class="product-title">
-														<a href="#">Beige knitted elastic runner shoes</a>
-													</h4>
-
-													<span class="cart-product-info">
-														<span class="cart-product-qty">1</span>
-														x $84.00
-													</span>
-												</div>
-												<!-- End .product-cart-details -->
-
-												<figure class="product-image-container">
-													<a href="#" class="product-image">
-														<img src="<?= base_url(); ?>assets/images/products/cart/product-1.jpg" alt="product" />
-													</a>
-												</figure>
-												<a href="#" class="btn-remove" title="Remove Product"><i class="icon-close"></i></a>
-											</div>
-											<!-- End .product -->
-
-											<div class="product">
-												<div class="product-cart-details">
-													<h4 class="product-title">
-														<a href="#">Blue utility pinafore denim dress</a>
-													</h4>
-
-													<span class="cart-product-info">
-														<span class="cart-product-qty">1</span>
-														x $76.00
-													</span>
-												</div>
-												<!-- End .product-cart-details -->
-
-												<figure class="product-image-container">
-													<a href="#" class="product-image">
-														<img src="assets/images/products/cart/product-2.jpg" alt="product" />
-													</a>
-												</figure>
-												<a href="#" class="btn-remove" title="Remove Product"><i class="icon-close"></i></a>
-											</div>
-											<!-- End .product -->
-										</div>
-										<!-- End .cart-product -->
-
-										<div class="dropdown-cart-total">
-											<span>Total</span>
-
-											<span class="cart-total-price">$160.00</span>
-										</div>
-										<!-- End .dropdown-cart-total -->
-
-										<div class="dropdown-cart-action">
-											<a href="#" class="btn btn-primary">View Cart</a>
-											<a href="#" class="btn btn-outline-primary-2"><span>Checkout</span><i class="icon-long-arrow-right"></i></a>
-										</div>
-										<!-- End .dropdown-cart-total -->
-									</div>
-									<!-- End .dropdown-menu -->
-								</div>
-								<!-- End .cart-dropdown -->
 							</div>
 						</div>
 						<!-- End .col-xxl-5col -->
@@ -327,11 +255,6 @@
 					<!-- End .main-nav -->
 				</div>
 				<!-- End .col-xl-9 col-xxl-10 -->
-
-				<div class="col col-lg-3 col-xl-3 col-xxl-2 header-right">
-					<i class="la la-lightbulb-o"></i>
-					<p><span>Clearance Up to 30% Off</span></p>
-				</div>
 			</div>
 			<!-- End .row -->
 		</div>
