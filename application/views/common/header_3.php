@@ -108,7 +108,7 @@
 							<a href="<?= site_url('b2bleads') ?>" class="sf-ul">B2B Leads</a>
 						</li>
 						<li>
-							<a href="<?= site_url('/') ?>" class="sf-ul">Companies</a>
+							<a href="<?= site_url('companies') ?>" class="sf-ul">Companies</a>
 						</li>
 					</ul><!-- End .menu -->
 				</nav><!-- End .main-nav -->

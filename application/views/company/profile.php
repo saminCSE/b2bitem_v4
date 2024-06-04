@@ -223,7 +223,7 @@
 			}'>
 			<?php foreach ($com_cat as $val) { ?>
 				<div class="banner banner-cat">
-					<a href="#">
+					<a href="<?= site_url('category/index/' . $val['link_prefix']); ?>">
 						<img src="https://b2bitem.com/upload/category/<?= $val['cat_img']; ?>" alt="<?= $val['category_name']; ?>" title="<?= $val['category_name']; ?>" class="product-image" style="height: 200.38px;" decoding="async" loading="lazy" />
 					</a>
 

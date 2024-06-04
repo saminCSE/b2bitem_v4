@@ -301,7 +301,7 @@ require_once(APPPATH . "views/common/header_1.php");
 						}'>
 						<?php foreach ($featured_cat_list as $val) { ?>
 							<div class="banner banner-cat">
-								<a href="#">
+								<a href="<?= site_url('category/index/' . $val['link_prefix']); ?>">
 									<img src="https://b2bitem.com/upload/category/<?= $val['cat_img']; ?>" alt="<?= $val['category_name']; ?>" title="<?= $val['category_name']; ?>" class="product-image" style="height: 193.38px;" decoding="async" loading="lazy" />
 								</a>
 
@@ -415,7 +415,7 @@ require_once(APPPATH . "views/common/header_1.php");
 								</div>
 							</div>
 							<div class="text-center text-lg-right">
-								<a href="#" class="btn btn-primary">
+								<a href="#" class="btn btn-primary" style="border-radius: 5px;">
 									<span>Start Now</span>
 									<i class="icon-long-arrow-right"></i>
 								</a>
@@ -656,7 +656,7 @@ require_once(APPPATH . "views/common/header_1.php");
 									<label class="text-lg-18 d-none text-muted">Item Category <span class="text-danger">*</span>
 									</label>
 									<div>
-										<select name="cat_id" id="cat_id" class="form-control text-md-down-14 rounded-0" style="height: 45px; background: none;">
+										<select name="cat_id" id="cat_id" class="form-control text-md-down-14 rounded-0" style="height: 45px;">
 											<option value="">-- Select Category --</option>
 											<?php foreach ($product_cat as $key => $cat) { ?>
 												<option value="<?= $cat['id']; ?>"> <?= $cat['category_name']; ?> </option>

@@ -127,7 +127,7 @@ require_once(APPPATH . "views/common/header_2.php");
 											<div id="product-accordion-info" class="collapse show" aria-labelledby="product-usages" data-parent="#product-accordion">
 												<div class="card-body">
 													<div class="product-desc-content">
-														<h3>Product Usages - Details</h3>
+														<!-- <h3>Product Usages - Details</h3> -->
 														<p><?= $pinfo['product_usage']; ?> </p>
 													</div><!-- End .product-desc-content -->
 												</div><!-- End .card-body -->
@@ -145,7 +145,7 @@ require_once(APPPATH . "views/common/header_2.php");
 											<div id="product-accordion-shipping" class="collapse" aria-labelledby="product-keywords" data-parent="#product-accordion">
 												<div class="card-body">
 													<div class="product-desc-content">
-														<h3>Product Keywords - Details</h3>
+														<!-- <h3>Product Keywords - Details</h3> -->
 														<p><?= $pinfo['product_keywords']; ?> </p>
 													</div><!-- End .product-desc-content -->
 												</div><!-- End .card-body -->
@@ -464,7 +464,7 @@ require_once(APPPATH . "views/common/header_2.php");
 															<div class="col-lg-9 offset-lg-3">
 																<div class="custom-control custom-checkbox">
 																	<input type="checkbox" data-toggle="submit" class="custom-control-input" id="agreeBusinessListingTerms" name="agreeBusinessListingTerms" checked required>
-																	<label class="custom-control-label text-muted text-15" for="agreeBusinessListingTerms"> I Agree to Business Listing <a href="https://b2bitem.com/terms" target="_blank" class="text-business-tertiary">Terms & General Agreement</a>
+																	<label class="custom-control-label text-muted text-15" for="agreeBusinessListingTerms"> I Agree to Business Listing <a href="#" target="_blank" class="text-business-tertiary">Terms & General Agreement</a>
 																	</label>
 																</div>
 															</div>

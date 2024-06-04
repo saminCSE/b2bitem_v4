@@ -815,7 +815,7 @@
 	border: 1px solid #e1e1e1;
 	border-radius: 5px;
 	overflow: hidden;
-	padding: 0 1.25rem 1.25rem;
+	/* padding: 0 1.25rem 1.25rem; */
 }
 
 .biz-box-title {

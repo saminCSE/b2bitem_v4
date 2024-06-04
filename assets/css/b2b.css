@@ -5472,7 +5472,7 @@ h3.title-with-square-box::before {
 }
 .requirement-table td {
 	border-top: 1px dashed #ddd;
-	border-bottom: 1px dashed #ddd;
+	/* border-bottom: 1px dashed #ddd; */
 }
 .requirement-table tr th:first-child,
 .requirement-table tr td:first-child {
@@ -6326,12 +6326,12 @@ h3.title-with-square-box::before {
 }
 .category-title {
 	display: inline-block;
-	color: var(--light-muted);
+	/* color: var(--light-muted); */
 	font-weight: 500;
 }
-a.category-title:hover {
+/* a.category-title:hover {
 	color: var(--title-default);
-}
+} */
 .owl-offer .owl-item:not(:last-child) > .owl-offer-item {
 	border-right: 1px solid var(--default-border);
 	padding-right: 0.5rem;

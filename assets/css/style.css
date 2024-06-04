@@ -7867,7 +7867,8 @@ p {
 }
 .banner-title a:hover,
 .banner-title a:focus {
-	text-decoration: none;
+	/* text-decoration: none; */
+	color: #c96;
 }
 .banner-title.text-white a {
 	color: #fff;
@@ -8601,7 +8602,7 @@ small.form-text {
 }
 .select-custom::after {
 	font-family: "molla";
-	content: "\f110";
+	/* content: "\f110"; */
 	position: absolute;
 	display: inline-block;
 	right: 1.9rem;
@@ -8989,7 +8990,7 @@ small.form-text {
 .table thead th,
 .table td {
 	border-top: none;
-	border-bottom: 0.1rem solid #ebebeb;
+	/* border-bottom: 0.1rem solid #ebebeb; */
 }
 .table th,
 .table td {

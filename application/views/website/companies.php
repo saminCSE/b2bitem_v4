@@ -183,8 +183,8 @@ require_once(APPPATH . "views/common/header_2.php");
 						</div>
 
 						<div class="biz-box bg-white py-3 mb-4 d-lg-down-none">
-							<div class="border-bottom mb-2">
-								<h3>New Products From Suppliers</h3>
+							<div class="biz-box-title d-flex justify-content-between mb-3">
+								<h4 class="block-text">New Products From Suppliers</h4>
 							</div>
 							<div class="table-responsive">
 								<table class="table table-borderless table-striped table-first-no-border v-align-middle mb-0">
