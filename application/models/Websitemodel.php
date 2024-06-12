@@ -214,7 +214,7 @@ class Websitemodel extends Frontend_Model
 	public function get_category_wise_company($id)
 	{
 
-		$this->db->select('c.company_name, cat.category_name, sub_cat.sub_category_name, cou.country_name');
+		$this->db->select('c.company_name, cat.category_name, sub_cat.sub_category_name, cou.country_name, cou.flag');
 		$this->db->from('company c');
 		$this->db->join('category cat', 'cat.id=c.cat_id', 'left');
 		$this->db->join('sub_category sub_cat', 'sub_cat.id=c.sub_cat_id', 'left');

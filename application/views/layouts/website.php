@@ -293,6 +293,26 @@
 	<script src="<?= base_url(); ?>assets/js/demos/demo-14.js"></script>
 
 	<script src="<?= base_url(); ?>assets/js/jquery.elevateZoom.min.js"></script>
+
+	<link rel="stylesheet" href="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/themes/df-messenger-default.css">
+	<script src="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/df-messenger.js"></script>
+	<df-messenger project-id="sclchatbot" agent-id="73204d21-4ef9-48a1-96a5-67c9a63aacb6" language-code="en" max-query-length="-1">
+		<df-messenger-chat-bubble chat-title="Ask anything you want !">
+		</df-messenger-chat-bubble>
+	</df-messenger>
+	<style>
+		df-messenger {
+			z-index: 999;
+			position: fixed;
+			--df-messenger-font-color: #000;
+			--df-messenger-font-family: Google Sans;
+			--df-messenger-chat-background: #f3f6fc;
+			--df-messenger-message-user-background: #d3e3fd;
+			--df-messenger-message-bot-background: #fff;
+			bottom: 16px;
+			right: 16px;
+		}
+	</style>
 </body>
 
 <!-- molla/index-14.html  22 Nov 2019 09:59:54 GMT -->

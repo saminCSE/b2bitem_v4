@@ -149,7 +149,7 @@ require_once(APPPATH . "views/common/header_2.php");
 													<div class="box-60 rounded border">
 														<?php if (!empty($va['sub_cat_img'])) { ?>
 															<a href="<?= site_url('subcategory/' . $subslag); ?>">
-																<img src="https://b2bitem.com/public/uploads/category/<?= $va['sub_cat_img']; ?>" class="img-fit-center rounded">
+																<img src="https://b2bitem.com/upload/category/<?= $va['sub_cat_img']; ?>" class="img-fit-center rounded">
 															</a>
 														<?php } ?>
 													</div>
@@ -180,7 +180,7 @@ require_once(APPPATH . "views/common/header_2.php");
 																</div>
 															</div>
 															<a href="<?= site_url(('details/') . $v['pslag']); ?>" class="product-img-box box-ratio-4by3 mb-2">
-																<img src="https://b2bitem.com/upload/product/<?= $v['product_image']; ?>" alt="Maxon Qualcomm QCN9024 WiFi6 Module - Advanced Wireless Connectivity" title="Maxon Qualcomm QCN9024 WiFi6 Module - Advanced Wireless Connectivity" class="product-img" decoding="async" loading="lazy">
+																<img src="https://b2bitem.com/upload/product/<?= $v['product_image']; ?>" alt="<?= $v['product_name']; ?>" title="<?= $v['product_name']; ?>" class="product-img" decoding="async" loading="lazy">
 															</a>
 															<div class="mb-3">
 																<ul class="list-unstyled d-flex flex-wrap justify-content-between mb-0">
@@ -232,7 +232,7 @@ require_once(APPPATH . "views/common/header_2.php");
 													</td>
 													<td>
 														<span class="mr-1 mt-n05">
-															<img src="https://b2bitem.com/public/flags/16x16/cn.png" alt="China">
+															<img src="https://b2bitem.com/upload/country/16_16/<?= $val['flag']; ?>" alt="<?= $val['country_name']; ?>">
 														</span>
 														<a href="#"><?= $val['country_name']; ?></a>
 													</td>
