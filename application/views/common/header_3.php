@@ -206,7 +206,7 @@
 										<a href="#" class="sf-with-ul">Company Profile</a>
 									</li> -->
 							<li>
-								<a href="#" class="sf-with-ul">Contact Us</a>
+								<a href="<?= site_url('company/contact/' . $com_slag); ?>" class="sf-with-ul">Contact Us</a>
 							</li>
 
 						</ul>

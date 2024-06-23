@@ -31,7 +31,9 @@ class Product extends Frontend_Controller
 
 		$pinfo = $this->websitemodel->get_product_details($slag);
 		$this->assign('pinfo', $pinfo);
-		//echo '<pre>';print_r($pinfo);exit;
+		// echo '<pre>';
+		// print_r($pinfo);
+		// exit;
 
 		$countylist = $this->websitemodel->get_country_list();
 		$this->assign('countylist', $countylist);

@@ -898,4 +898,39 @@ class Website extends Frontend_Controller
 			return true;
 		}
 	}
+
+	// public function business($ctype, $cat_slag)
+	// {
+
+
+	// 	$result =  $this->websitemodel->get_business_list($ctype, $cat_slag);
+	// 	$this->assign('data', $result);
+	// 	echo '<Pre>';
+	// 	print_r($result);
+	// 	exit;
+	// 	// $this->load->view('website/business');
+	// 	$this->load->view('website/business', ['data_list' => $result['data_list']]);
+	// }
+
+	public function business($ctype, $cat_slag)
+	{
+		$result = $this->websitemodel->get_business_list($ctype, $cat_slag);
+		$category_name = ''; // Initialize category name
+
+		// Determine category name based on $ctype and $cat_slag logic
+		if ($ctype == 'm') {
+			$category_name = $this->websitemodel->get_category_name($cat_slag);
+		} else {
+			$category_name = $this->websitemodel->get_subcategory_name($cat_slag);
+		}
+
+		// echo '<Pre>';
+		// print_r($result);
+		// exit;
+
+		$this->load->view('website/business', [
+			'data_list' => $result['data_list'],
+			'category_name' => $category_name
+		]);
+	}
 }

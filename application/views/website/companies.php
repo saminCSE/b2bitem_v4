@@ -60,10 +60,12 @@ require_once(APPPATH . "views/common/header_2.php");
 
 											$sub_cat = $this->sellermodel->get_sub_cat_list($val['id']);
 
+
+
 										?>
 
 											<li class="nav-item aside-category-item dropdown">
-												<a href="https://b2bitem.com/business-directory/agro-agriculture" class="bg-white px-3 d-flex aside-category-link">
+												<a href="<?= site_url('business/m/' . $slag); ?>" class="bg-white px-3 d-flex aside-category-link">
 													<span class="mr-2">
 														<i class="<?= $icon; ?> link-icon"></i>
 													</span> <?= $catname; ?> <span class="ml-auto pl-2 d-lg-down-none">
@@ -72,16 +74,19 @@ require_once(APPPATH . "views/common/header_2.php");
 												</a>
 												<div class="dropdown-menu category-menu-dropdown-submenu mt-n2">
 													<div class="text-20 text-strong mb-3">
-														<a href="https://b2bitem.com/business-directory/agro-agriculture"><?= $catname; ?></a>
+														<a href="<?= site_url('business/m/' . $slag); ?>"><?= $catname; ?></a>
 													</div>
 													<ul class="list-unstyled row mb-0">
 														<?php
+
 														foreach ($sub_cat as $key => $v) {
+
+															$subslag = $v['sub_link_prefix'];
 
 															$subcat = $v['sub_category_name'];
 														?>
 															<li class="col-sm-6 col-lg-4 mb-2">
-																<a href="https://b2bitem.com/business-directory/agro-agriculture/agri-business" class="d-flex d-md-block text-nowrap text-14 text-theme text-overflow-ellipsis">
+																<a href="<?= site_url('business/' . $slag . '/' . $subslag); ?>" class="d-flex d-md-block text-nowrap text-14 text-theme text-overflow-ellipsis">
 																	<span class="mt-n05 mr-2 d-md-none">
 																		<i class="fa fa-circle text-6"></i>
 																	</span> <?= $subcat; ?> </a>

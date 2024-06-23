@@ -71,6 +71,9 @@ $route['(:any)'] = 'company/index/$1';
 $route['buysell/(:any)'] = 'website/buysell/$1';
 $route['cat_wise_buyer/(:any)'] = 'website/cat_wise_buyer/$1';
 
+$route['business/(:any)/(:any)'] = 'website/business/$1/$2';
+
+
 
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;

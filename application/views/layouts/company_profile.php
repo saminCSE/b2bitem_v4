@@ -515,6 +515,136 @@
 	<!-- Main JS File -->
 	<script src="<?= base_url(); ?>assets/js/main.js"></script>
 	<script src="<?= base_url(); ?>assets/js/demos/demo-14.js"></script>
+
+	<script src="<?= base_url(); ?>assets/js/fileinput.min.js"></script>
+	<script src="<?= base_url(); ?>assets/js/multiple-file.js"></script>
+
+	<script>
+		if ($('input[data-has-img="true"]').is(':checked')) {
+			$('.product-has-img').show();
+		} else {
+			$('.product-has-img').hide();
+		}
+		$('input[type="radio"]').on('change', function() {
+			let checkHasImg = $(this).attr('data-has-img');
+			if ($('input[data-has-img="true"]').is(':checked')) {
+				$('.product-has-img').show();
+			} else {
+				$('.product-has-img').hide();
+			}
+		});
+		$("#fileUpload").fileinput({
+			theme: "fa",
+			uploadUrl: "/file-upload-batch/2",
+			deleteUrl: "/images/file-delete",
+			hideThumbnailContent: false,
+			maxFileSize: 1000,
+			maxFileCount: 5,
+			browseClass: "btn file-input-btn",
+			showCaption: false,
+			showRemove: false,
+			showUpload: false,
+			overwriteInitial: false,
+			initialPreview: [],
+		});
+		$(document).on('click', '.file-preview-thumbnails', function() {
+			$('#fileUpload').trigger('click');
+		});
+		$('.file-drop-zone-title').html('Upload File');
+		$(document).on('click', '.file-drop-zone-title', function() {
+			$('#fileUpload').trigger('click');
+		});
+		$(document).on('click', '.file-preview-frame', function() {
+			$(this).stopPropagation();
+		});
+		$('.add-more-specification').on('click', function(e) {
+			e.preventDefault();
+			let target = $('#moreSpecification');
+			$(target).append(`
+            <div class="specification-item form-item-removable removable-item mb-4">
+                <div class="row">
+                    <div class="col-6">
+                        <input type="text" name="attribute[]" class="form-control" placeholder="Attribute E.G: Color">
+                    </div>
+                    <div class="col-6">
+                        <input type="text" name="value[]" class="form-control" placeholder="Attribute E.G: Red">
+                    </div>
+                </div>
+                <a href="#" class="form-item-remover remove-item"><span class="text">&times</span></a>
+            </div>
+            `)
+		});
+		if ($('#newUserToggler').is(':checked')) {
+			$('#existingUser').removeClass('show');
+			$('#newUser').addClass('show');
+		} else if ($('#existingUserToggler').is(':checked')) {
+			$('#newUser').removeClass('show');
+			$('#existingUser').addClass('show');
+		}
+		$('input[type="radio"].user-existence-checker').on('click', function() {
+			if ($('#newUserToggler').is(':checked')) {
+				$('#existingUser').removeClass('show');
+				$('#newUser').addClass('show');
+			} else if ($('#existingUserToggler').is(':checked')) {
+				$('#newUser').removeClass('show');
+				$('#existingUser').addClass('show');
+			}
+		});
+		var allowImageExtension = [".jpg", ".jpeg", ".bmp", ".gif", ".png", ".webp", ".svg"];
+		let duplicateCheckArray = [];
+		$(document).ready(function() {
+			if (window.File && window.FileList && window.FileReader) {
+				$(".multiple-file-upload").on("change", function(e) {
+					var uploadItemLength = $(this).parents('.uploaded-field').find('.upload-item').length;
+					let thisAfterList = $(this).parents('.uploaded-field').find('.upload-file-list');
+					let files = this.files;
+					for (let i = 0; i < files.length; i++) {
+						let getExtension = '.' + files[i].name.split('.').pop();
+						let setExtension = getExtension.toLowerCase();
+						if (allowImageExtension.indexOf(setExtension) > -1) {
+							if (duplicateCheckArray.indexOf(files[i].name) > -1) {
+								alert(files[i].name + ' already selected.');
+							} else {
+								if (files[i].size <= 2000000) {
+									let dt = new DataTransfer();
+									let f = files[i];
+									console.log(f);
+									dt.items.add(new File([f.slice(0, f.size, f.type)], f.name));
+									$(this).parents('.uploaded-field').find('.upload-file-list').append(`
+                                    <li class="upload-item box-70 mb-3 mr-3 border rounded">
+                                        <img class="uploaded-img" src="" alt='File'/>
+                                        <input type="file" name="images[]" class="d-none attach-file-value" id="attachFile` + i + `">
+                                        <button type='button' class="box-20 rounded-circle remove-uploaded"><span class='text'>&times</span></button>
+                                    </li>
+                                `);
+									let fileReader = new FileReader();
+									fileReader.onload = (function(j) {
+										let file = j.target;
+										$("#attachFile" + i).after("<img class=\"uploaded-img\" src=\"" + j.target.result + "\" alt='File'/>").removeAttr('id');
+										$("#attachFile" + i).removeAttr('id')
+									});
+									fileReader.readAsDataURL(f);
+									var back = document.getElementById("attachFile" + i);
+									back.files = dt.files;
+								} else {
+									alert('Warning! Large file not acceptable and will automatically remove.\n\nEvery file size maximum 2MB!');
+								}
+							}
+							duplicateCheckArray.push(files[i].name);
+						} else {
+							alert(setExtension + ' ' + ' File type not allow');
+						}
+					}
+					$(this).val('');
+				});
+			} else {
+				alert("Your browser doesn't support to File API")
+			}
+		});
+		$(document).on('click', '.remove-uploaded', function() {
+			$(this).parent(".upload-item").remove();
+		});
+	</script>
 </body>
 
 <!-- molla/index-14.html  22 Nov 2019 09:59:54 GMT -->

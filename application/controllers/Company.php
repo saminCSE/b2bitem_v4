@@ -48,4 +48,32 @@ class Company extends Frontend_Controller
 
 		$this->load->view('company/com_product');
 	}
+
+	public function contact($slag)
+	{
+		$info = $this->websitemodel->getCompanyProfile($slag);
+		$this->assign('info', $info);
+		// echo '<pre>';
+		// print_r($info);
+		// exit;
+
+		// $pinfo = $this->websitemodel->get_product_details($slag);
+		// $this->assign('pinfo', $pinfo);
+		// echo '<pre>';
+		// print_r($pinfo);
+		// exit;
+
+		// $countylist = $this->websitemodel->get_country_list();
+		// $this->assign('countylist', $countylist);
+
+		// $pgalary = $this->websitemodel->get_product_gallary($pinfo['pid']);
+		// $this->assign('pgalary', $pgalary);
+
+		// $relatedproduct = $this->websitemodel->get_related_product($pinfo['category_id'], $pinfo['sub_category_id'], $pinfo['pid']);
+		// $this->assign('relatedproduct', $relatedproduct);
+
+
+
+		$this->load->view('company/contact');
+	}
 }

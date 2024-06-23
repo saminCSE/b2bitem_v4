@@ -306,7 +306,8 @@ require_once(APPPATH . "views/common/header_2.php");
 		</div><!-- End .container-fluid -->
 
 		<div class="container" id="product-inquiry">
-			<h2 class="title text-center mb-4">Send Your Message to: <a href="<?= site_url('/' . $pinfo['slag']); ?>" title="View Company Details" class="text-info">
+			<h2 class="title text-center mb-4">Send Your Message to:
+				<a href="<?= site_url('/' . $pinfo['slag']); ?>" title="View Company Details" class="text-info">
 					<span class="text-strong"><?= $pinfo['company_name']; ?></span>
 				</a>
 			</h2>
@@ -315,7 +316,7 @@ require_once(APPPATH . "views/common/header_2.php");
 					<div class="card rounded-0 mb-4 specification">
 						<div class="card-body bg-white">
 							<div class="biz-form px-lg-5 py-lg-4">
-								<form action="#" method="post" enctype="multipart/form-data">
+								<form id="inquiry-form" action="#" method="post" enctype="multipart/form-data">
 									<input type="hidden" name="_token" value="6IAc9fKColymscQ52UydixIdL4QWaJcefDOvbl0X">
 									<input type="hidden" name="inquiry_to" value="seller">
 									<input type="hidden" name="item_id" value="34279">
@@ -333,13 +334,11 @@ require_once(APPPATH . "views/common/header_2.php");
 												<div class="form-group">
 													<div>
 														<input type="text" name="subject" value placeholder="<?= $pinfo['product_name']; ?>" class="form-control deep-placeholder numeric-validation" data-check-subject="true">
-
 													</div>
 												</div>
 												<div class="form-group">
 													<div>
 														<textarea rows="5" name="mail_body" class="form-control deep-placeholder" placeholder="Enter your inquiry details such as product name, color, size, quantity, pricing etc"></textarea>
-
 													</div>
 												</div>
 												<div class="mb-3">
@@ -351,10 +350,6 @@ require_once(APPPATH . "views/common/header_2.php");
 														<div class="custom-control custom-radio custom-control-inline my-1 mr-0">
 															<input type="radio" class="custom-control-input user-existence-checker" id="newUserToggler" name="member_type" value="new">
 															<label class="custom-control-label text-strong text-muted" for="newUserToggler">New Member</label>
-														</div>
-														<div>
-															<!--span class="error">
-                                                    <i class="fa fa-warning"></i> This field is required </span-->
 														</div>
 													</div>
 													<div class="user-existence-togglable" id="existingUser">
@@ -464,7 +459,8 @@ require_once(APPPATH . "views/common/header_2.php");
 															<div class="col-lg-9 offset-lg-3">
 																<div class="custom-control custom-checkbox">
 																	<input type="checkbox" data-toggle="submit" class="custom-control-input" id="agreeBusinessListingTerms" name="agreeBusinessListingTerms" checked required>
-																	<label class="custom-control-label text-muted text-15" for="agreeBusinessListingTerms"> I Agree to Business Listing <a href="#" target="_blank" class="text-business-tertiary">Terms & General Agreement</a>
+																	<label class="custom-control-label text-muted text-15" for="agreeBusinessListingTerms"> I Agree to Business Listing
+																		<a href="#" target="_blank" class="text-business-tertiary">Terms & General Agreement</a>
 																	</label>
 																</div>
 															</div>
@@ -473,20 +469,30 @@ require_once(APPPATH . "views/common/header_2.php");
 												</div>
 												<div class="text-center">
 													<button type="submit" class="btn btn-info px-5 btn-md-down-small">
-														<i class="fa fa-envelope-o mr-2"></i> Send Message </button>
+														<i class="fa fa-envelope-o mr-2"></i> Send Message
+													</button>
 												</div>
 											</div>
 										</div>
 									</div>
 								</form>
+								<script>
+									document.getElementById('inquiry-form').addEventListener('submit', function(event) {
+										event.preventDefault();
+										<?php if (empty($this->session->userdata('company_id'))) : ?>
+											window.location.href = '<?= site_url('login'); ?>';
+										<?php else : ?>
+											this.submit();
+										<?php endif; ?>
+									});
+								</script>
 							</div>
 						</div>
-
-
 					</div>
 				</div>
 			</div>
 		</div>
+
 
 		<div class="container">
 			<h2 class="title text-center mb-4">Related Products</h2><!-- End .title text-center -->

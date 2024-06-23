@@ -444,4 +444,117 @@ class Websitemodel extends Frontend_Model
 		$rs = $this->db->get();
 		return  $rs->result_array();
 	}
+
+
+	public function get_business_list($ctype, $cat_slag)
+	{
+
+		if ($ctype == 'm') {
+
+			$this->db->select('*');
+			$this->db->from('category');
+			$this->db->where('link_prefix', $cat_slag);
+			$rs = $this->db->get();
+			$catinfo = $rs->row_array();
+			$cid = $catinfo['id'];
+
+			$this->db->select('c.*');
+			$this->db->from('company c');
+			$this->db->join('assign_company ac', 'c.id=ac.company_id', 'left');
+			$this->db->where("c.status", "Approve");
+			$where = "(c.cat_id='" . $cid . "' or ac.category_id='" . $cid . "')";
+			$this->db->where($where);
+
+			$rs2 = $this->db->get();
+
+			$catinfo = $rs2->result_array();
+
+			$compnayproductlist = array();
+
+			foreach ($catinfo as $val) {
+
+				$cid = $val['id'];
+
+				$val['product_list'] = $this->get_compnay_wise_product_last3_list($cid);
+
+				$compnayproductlist[] = $val;
+			}
+
+			$res['data_list'] = $compnayproductlist;
+		} else {
+
+			$this->db->select('c.id as cat_id, sc.id as sub_id');
+			$this->db->from('category c');
+			$this->db->join('sub_category sc', 'c.id=sc.category_id', 'left');
+			$this->db->where('c.link_prefix', $ctype);
+			$this->db->where('sc.sub_link_prefix', $cat_slag);
+			$rs = $this->db->get();
+			$catinfo = $rs->row_array();
+
+			$sub_id = $catinfo['sub_id'];
+
+			$this->db->select('c.*');
+			$this->db->from('company c');
+			$this->db->join('assign_company ac', 'c.id=ac.company_id', 'left');
+			$this->db->where("c.status", "Approve");
+			$where = "(c.sub_cat_id='" . $sub_id . "' or ac.sub_category_id='" . $sub_id . "')";
+			$this->db->where($where);
+
+			$rs2 = $this->db->get();
+
+			$catinfo = $rs2->result_array();
+
+			$compnayproductlist = array();
+
+			foreach ($catinfo as $val) {
+
+				$cid = $val['id'];
+
+				$val['product_list'] = $this->get_compnay_wise_product_last3_list($cid);
+
+				$compnayproductlist[] = $val;
+			}
+
+			$res['data_list'] = $compnayproductlist;
+		}
+
+		return $res;
+	}
+
+	public function get_compnay_wise_product_last3_list($cid)
+	{
+
+		$this->db->select('p.id, p.product_name, p.product_image, p.price, p.pslag, c.company_name, cat.category_name, pn.name as unit, cou.country_name, cou.flag');
+		$this->db->from('product p');
+		$this->db->join('company c', 'c.id=p.company_id', 'left');
+		$this->db->join('category cat', 'cat.id=p.category_id', 'left');
+		$this->db->join('country cou', 'cou.id=p.country_id', 'left');
+		$this->db->join('product_unit pn', 'pn.id=p.unit_id', 'left');
+		$this->db->where("c.id", $cid);
+		$this->db->where("p.status", "Active");
+		$this->db->order_by("p.updated_at", "desc");
+		$this->db->limit(3);
+		$rs = $this->db->get();
+		return  $rs->result_array();
+	}
+
+	public function get_category_name($cat_slag)
+	{
+		$this->db->select('category_name');
+		$this->db->from('category');
+		$this->db->where('link_prefix', $cat_slag);
+		$rs = $this->db->get();
+		$catinfo = $rs->row_array();
+		return $catinfo['category_name'];
+	}
+
+	public function get_subcategory_name($cat_slag)
+	{
+		$this->db->select('sub_category_name');
+		$this->db->from('sub_category');
+		$this->db->where('sub_link_prefix', $cat_slag);
+		$rs = $this->db->get();
+		$catinfo = $rs->row_array();
+		return $catinfo['sub_category_name'];
+	}
 }
